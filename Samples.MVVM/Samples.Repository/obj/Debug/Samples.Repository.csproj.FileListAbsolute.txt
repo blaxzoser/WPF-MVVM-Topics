@@ -1,0 +1,9 @@
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\obj\Debug\Samples.Repository.csproj.CoreCompileInputs.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\bin\Debug\Samples.Repository.dll
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\bin\Debug\Samples.Repository.pdb
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\bin\Debug\Sample.Entities.dll
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\bin\Debug\Sample.Entities.pdb
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\obj\Debug\Samples.Repository.csprojAssemblyReference.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\obj\Debug\Samples.Repository.csproj.CopyComplete
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\obj\Debug\Samples.Repository.dll
+C:\Users\luis pintado\source\repos\Samples.MVVM\Samples.Repository\obj\Debug\Samples.Repository.pdb

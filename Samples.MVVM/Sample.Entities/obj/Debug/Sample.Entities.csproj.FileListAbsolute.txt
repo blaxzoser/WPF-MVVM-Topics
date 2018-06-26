@@ -1,0 +1,5 @@
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\bin\Debug\Sample.Entities.dll
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\bin\Debug\Sample.Entities.pdb
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\Sample.Entities.csproj.CoreCompileInputs.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\Sample.Entities.dll
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\Sample.Entities.pdb
