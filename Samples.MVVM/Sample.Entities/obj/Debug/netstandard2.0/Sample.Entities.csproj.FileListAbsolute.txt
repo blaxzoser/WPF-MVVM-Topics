@@ -1,0 +1,9 @@
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\bin\Debug\netstandard2.0\Sample.Entities.deps.json
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\bin\Debug\netstandard2.0\Sample.Entities.dll
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\bin\Debug\netstandard2.0\Sample.Entities.pdb
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\netstandard2.0\Sample.Entities.csprojAssemblyReference.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\netstandard2.0\Sample.Entities.csproj.CoreCompileInputs.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\netstandard2.0\Sample.Entities.AssemblyInfoInputs.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\netstandard2.0\Sample.Entities.AssemblyInfo.cs
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\netstandard2.0\Sample.Entities.dll
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Entities\obj\Debug\netstandard2.0\Sample.Entities.pdb

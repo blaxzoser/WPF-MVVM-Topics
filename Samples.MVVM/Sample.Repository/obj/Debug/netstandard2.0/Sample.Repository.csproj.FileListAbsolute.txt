@@ -1,0 +1,4 @@
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Repository\obj\Debug\netstandard2.0\Sample.Repository.csprojAssemblyReference.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Repository\obj\Debug\netstandard2.0\Sample.Repository.csproj.CoreCompileInputs.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Repository\obj\Debug\netstandard2.0\Sample.Repository.AssemblyInfoInputs.cache
+C:\Users\luis pintado\source\repos\Samples.MVVM\Sample.Repository\obj\Debug\netstandard2.0\Sample.Repository.AssemblyInfo.cs
