@@ -18,7 +18,7 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if(_name != null)
+                if(_name != value)
                 {
                     _name = value;
                     PropertyChanged(this, new PropertyChangedEventArgs("Name"));
@@ -35,7 +35,7 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if (_lastName != null)
+                if (_lastName != value)
                 {
                     _lastName = value;
                     PropertyChanged(this, new PropertyChangedEventArgs("LastName"));
@@ -52,11 +52,12 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if (_phone.HasValue)
+                if (_phone != value)
                 {
                     _phone = value;
                     PropertyChanged(this, new PropertyChangedEventArgs("Phone"));
                 }
+                   
             }
         }
 

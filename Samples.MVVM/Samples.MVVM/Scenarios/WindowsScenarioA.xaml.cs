@@ -15,11 +15,18 @@ using System.Windows.Shapes;
 namespace Samples.MVVM.Scenarios
 {
     /// <summary>
-    /// Interaction logic for WindowsScenarioOne.xaml
+    /// Basic Scenario A in  MVVM
+    //-Simple approach Binding MVVM
+    //-Common mistakes in Binding
+    //-Issues List vs ObservableCollection
+    //-Sample bad practice to use events
+    //-Sample Properties
+    //-Use ItemTemplate for Combo Box, ListView with Binding
+    //-Use some Tricks to communication ViewMode and View(not recomment, its a hack)
     /// </summary>
-    public partial class WindowsScenarioOne : Window
+    public partial class WindowsScenarioA : Window
     {
-        public WindowsScenarioOne()
+        public WindowsScenarioA()
         {
             InitializeComponent();
         }

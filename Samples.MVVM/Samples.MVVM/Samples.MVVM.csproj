@@ -65,20 +65,24 @@
       <DependentUpon>WindowsScenarioC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CustomerAddViewModel.cs" />
+    <Compile Include="ViewModel\CustomerListClassicBetterViewModel.cs" />
     <Compile Include="ViewModel\CustomerListClassicViewModel.cs" />
     <Compile Include="ViewModel\CustomerListComboModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="View\CustomerAddView.xaml.cs">
       <DependentUpon>CustomerAddView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\CustomerListClassic.xaml.cs">
-      <DependentUpon>CustomerListClassic.xaml</DependentUpon>
+    <Compile Include="View\CustomerListClassicView.xaml.cs">
+      <DependentUpon>CustomerListClassicView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\CustomerListCombo.xaml.cs">
-      <DependentUpon>CustomerListCombo.xaml</DependentUpon>
+    <Compile Include="View\CustomerListClassicBetterView.xaml.cs">
+      <DependentUpon>CustomerListClassicBetterView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\CustomerListComboDataType.xaml.cs">
-      <DependentUpon>CustomerListComboDataType.xaml</DependentUpon>
+    <Compile Include="View\CustomerListComboView.xaml.cs">
+      <DependentUpon>CustomerListComboView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomerListComboDataTypeView.xaml.cs">
+      <DependentUpon>CustomerListComboDataTypeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CustomerListView.xaml.cs">
       <DependentUpon>CustomerListView.xaml</DependentUpon>
@@ -111,15 +115,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\CustomerListClassic.xaml">
+    <Page Include="View\CustomerListClassicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\CustomerListCombo.xaml">
+    <Page Include="View\CustomerListClassicBetterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\CustomerListComboDataType.xaml">
+    <Page Include="View\CustomerListComboView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomerListComboDataTypeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -17,16 +17,17 @@ using System.Windows.Shapes;
 namespace Samples.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for CustomerListClassic.xaml
+    /// Interaction logic for CustomerListClassViewBetter.xaml
     /// </summary>
-    public partial class CustomerListClassic : UserControl
+    public partial class CustomerListClassicBetterView : UserControl
     {
-        private readonly CustomerListClassicViewModel _viewModel;
-        public CustomerListClassic()
+        private readonly CustomerListClassicBetterViewModel _viewModel;
+
+        public CustomerListClassicBetterView()
         {
-            _viewModel = new CustomerListClassicViewModel();
+            _viewModel = new CustomerListClassicBetterViewModel();
             this.DataContext = _viewModel;
-            InitializeComponent();         
+            InitializeComponent();
         }
 
         /// <summary>

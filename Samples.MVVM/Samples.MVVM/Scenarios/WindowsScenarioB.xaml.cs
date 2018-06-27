@@ -17,9 +17,9 @@ namespace Samples.MVVM.Scenarios
     /// <summary>
     /// Interaction logic for WindowsScenarioTree.xaml
     /// </summary>
-    public partial class WindowsScenarioTree : Window
+    public partial class WindowsScenarioB : Window
     {
-        public WindowsScenarioTree()
+        public WindowsScenarioB()
         {
             InitializeComponent();
         }
