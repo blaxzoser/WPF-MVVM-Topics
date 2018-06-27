@@ -54,8 +54,26 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
+    <Compile Include="Scenarios\WindowsScenarioA.xaml.cs">
+      <DependentUpon>WindowsScenarioA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\WindowsScenarioB.xaml.cs">
+      <DependentUpon>WindowsScenarioB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\WindowsScenarioC.xaml.cs">
+      <DependentUpon>WindowsScenarioC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\CustomerAddViewModel.cs" />
+    <Compile Include="ViewModel\CustomerListClassicViewModel.cs" />
     <Compile Include="ViewModel\CustomerListComboModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
+    <Compile Include="View\CustomerAddView.xaml.cs">
+      <DependentUpon>CustomerAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomerListClassic.xaml.cs">
+      <DependentUpon>CustomerListClassic.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CustomerListCombo.xaml.cs">
       <DependentUpon>CustomerListCombo.xaml</DependentUpon>
     </Compile>
@@ -77,6 +95,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Scenarios\WindowsScenarioA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\WindowsScenarioB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\WindowsScenarioC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomerAddView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomerListClassic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\CustomerListCombo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Samples.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,17 +14,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM
+namespace Samples.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CustomerAddView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CustomerAddView : UserControl
     {
-        public MainWindow()
+        public CustomerAddView()
         {
-            Scenarios.WindowsScenarioOne newWindows = new Scenarios.WindowsScenarioOne();
-            newWindows.ShowDialog();
+            this.DataContext = new CustomerAddViewModel();
             InitializeComponent();
         }
     }
