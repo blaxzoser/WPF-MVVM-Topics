@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-
+using System.Windows.Input;
 
 namespace Samples.MVVM.ViewModel
 {
@@ -18,15 +18,33 @@ namespace Samples.MVVM.ViewModel
         private ICustomer CustomerRepository;
         #endregion
 
-        #region Commands
-        public RelayCommand DeleteCommand { get;  set; }
+        #region Commands     
+        public ICommand MessageCommand { get; set; }
+        public RelayCommand DeleteCommand { get; set; }
+        public RelayParameterCommand<string> AddCommand { get; set; }
         #endregion
 
         #region Properties
-        public ObservableCollection<Customer> Customers { get; set; }  
+        public ObservableCollection<Customer> Customers { get; set; }
+
+
+        private string _name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+                AddCommand.RaiseCanExecuteChanged();
+            }
+        }
+
 
         private Customer _selectedCustomer;
-        public  Customer SelectedCustomer
+        public Customer SelectedCustomer
         {
             get
             {
@@ -46,8 +64,12 @@ namespace Samples.MVVM.ViewModel
         {
             CustomerRepository = new CustomerRepository();
             Customers = new ObservableCollection<Customer>(CustomerRepository.Get());
-            DeleteCommand = new RelayCommand(OnDelete,CanDelete);
+            DeleteCommand = new RelayCommand(OnDelete, CanDelete);
+            AddCommand = new RelayParameterCommand<string>(OnAdd, CanAdd);
+            MessageCommand = new SimpleCommand();
         }
+
+
         #endregion
 
         #region Methods
@@ -60,6 +82,21 @@ namespace Samples.MVVM.ViewModel
         private void OnDelete()
         {
             Customers.Remove(SelectedCustomer);
+        }
+
+
+        private bool CanAdd(object obj)
+        {
+            return (obj is string);
+        }
+
+        private void OnAdd(object obj)
+        {
+            if (obj != null)
+            {
+                string name = obj as string;
+                Customers.Add(new Customer() { LastName = "", Name = name, Phone = 000 });
+            }
         }
 
         #endregion

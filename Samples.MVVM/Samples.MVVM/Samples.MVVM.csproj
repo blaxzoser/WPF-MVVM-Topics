@@ -54,6 +54,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Command\RelayParameterCommand.cs" />
+    <Compile Include="Command\SimpleCommand.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Scenarios\WindowsScenarioA.xaml.cs">
       <DependentUpon>WindowsScenarioA.xaml</DependentUpon>

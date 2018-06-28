@@ -22,7 +22,7 @@ namespace Samples.MVVM
     {
         public MainWindow()
         {
-            Scenarios.WindowsScenarioA newWindows = new Scenarios.WindowsScenarioA();
+            Scenarios.WindowsScenarioC newWindows = new Scenarios.WindowsScenarioC();
             newWindows.ShowDialog();
             InitializeComponent();
         }

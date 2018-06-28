@@ -7,16 +7,17 @@ using System.Windows.Input;
 
 namespace Samples.MVVM.Command
 {
-    public class RelayCommand : ICommand
-    {
-        Action _tarjetExecuteMethod;
-        Func<bool> _tarjetCanExecuteMethod;
 
-        public RelayCommand(Action excecutedMethod)
+    public class RelayParameterCommand<T> : ICommand
+    {
+        Action<T> _tarjetExecuteMethod;
+        Predicate<T> _tarjetCanExecuteMethod;
+
+        public RelayParameterCommand(Action<T> excecutedMethod)
         {
             _tarjetExecuteMethod = excecutedMethod;
         }
-        public RelayCommand(Action excecutedMethod, Func<bool> canExecuteMethod)
+        public RelayParameterCommand(Action<T> excecutedMethod, Predicate<T> canExecuteMethod)
         {
             _tarjetExecuteMethod = excecutedMethod;
             _tarjetCanExecuteMethod = canExecuteMethod;
@@ -32,30 +33,18 @@ namespace Samples.MVVM.Command
 
         public bool CanExecute(object parameter)
         {
-            if(_tarjetCanExecuteMethod != null)
-            {
-                return _tarjetCanExecuteMethod();
-            }
-            if(_tarjetExecuteMethod != null)
-            {
-                return true;
-            }
-            return false;
+            return _tarjetCanExecuteMethod == null ? true : _tarjetCanExecuteMethod((T)parameter);
         }
 
         public void Execute(object parameter)
         {
-            if(_tarjetExecuteMethod != null)
-            { _tarjetExecuteMethod(); }
+            if (_tarjetExecuteMethod != null)
+            { _tarjetExecuteMethod((T)parameter); }
         }
 
-       
+
 
         #endregion
 
     }
-
-
-
-  
 }

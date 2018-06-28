@@ -15,7 +15,12 @@ using System.Windows.Shapes;
 namespace Samples.MVVM.Scenarios
 {
     /// <summary>
-    /// Interaction logic for WindowsScenarioTwo.xaml
+    /// Scenario C:
+    /// Events vs Commands
+    /// Diffents kind of Commands
+    /// How to invoke in  View
+    /// How to paint in datagrid in view
+    /// The best practice 
     /// </summary>
     public partial class WindowsScenarioC : Window
     {

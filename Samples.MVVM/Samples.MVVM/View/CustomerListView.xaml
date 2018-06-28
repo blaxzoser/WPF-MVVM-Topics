@@ -17,17 +17,50 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0"
+                Grid.Column="1"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Delete" 
                 Command="{Binding DeleteCommand}"
                 Width="75">
         </Button>
+        <Button Grid.Row="0"   
+                Grid.Column="0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Add" 
+                Command="{Binding AddCommand}"
+                CommandParameter="{Binding ElementName=textboxName,Path=Text}"
+                Width="75">
+        </Button>
+        <Button Grid.Row="0"   
+                Grid.Column="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Message" 
+                Command="{Binding MessageCommand}"
+                Width="75">
+        </Button>
+
+        <TextBox x:Name="textboxName" 
+                 Width="100" 
+                 Grid.Row="0" 
+                 Grid.Column="0"  
+                 HorizontalAlignment="Left"  
+                 VerticalAlignment="Top" 
+                 Text="{Binding Name}"
+                 Margin="98,2,0,0" ></TextBox>
         <DataGrid x:Name="CustomerGrid" 
                       AutoGenerateColumns="False"
                       ItemsSource="{Binding Customers}"
                       Grid.Row="1"
+                      Grid.ColumnSpan="3"
                       SelectedItem="{Binding SelectedCustomer}"
                       >
             <DataGrid.Columns>
