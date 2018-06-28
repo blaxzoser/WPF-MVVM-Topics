@@ -6,7 +6,10 @@ namespace Sample.Repository
 {
     public class CustomerRepository : ICustomer
     {
-        public void Add()
+
+
+
+        public void Add(Customer customer)
         {
             throw new NotImplementedException();
         }
@@ -23,6 +26,17 @@ namespace Sample.Repository
         public void Update()
         {
             throw new NotImplementedException();
+        }
+
+        public List<Nationality> GetAllNationalities()
+        {
+            var list = new List<Nationality>();
+            list.Add(new Nationality() { Description = "Asia" , NationalityID =1 });
+            list.Add(new Nationality() { Description = "Africa", NationalityID = 0 });
+            list.Add(new Nationality() { Description = "Europe", NationalityID = 2 });
+            list.Add(new Nationality() { Description = "Oceania", NationalityID = 3 });
+            list.Add(new Nationality() { Description = "IT", NationalityID = 4 });
+            return list;
         }
     }
 }

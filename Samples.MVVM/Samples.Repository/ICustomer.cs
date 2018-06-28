@@ -8,7 +8,8 @@ namespace Sample.Repository
     public interface ICustomer
     {
         List<Customer> Get();
-        void Add();
+        void Add(Customer customer);
         void Update();
+        List<Nationality> GetAllNationalities();
     }
 }

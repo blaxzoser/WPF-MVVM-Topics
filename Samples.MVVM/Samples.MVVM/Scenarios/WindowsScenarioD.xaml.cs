@@ -10,20 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM
+namespace Samples.MVVM.Scenarios
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    //  -Add new Scenario D
+    //--Approch Add a object  from ViewModel
+    //--How to use a covert
+    //--How to use a boolean 
+    //--How to use a enabled propertie
+    //--how use a combo box
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowsScenarioD : Window
     {
-        public MainWindow()
+        public WindowsScenarioD()
         {
-            Scenarios.WindowsScenarioD newWindows = new Scenarios.WindowsScenarioD();
-            newWindows.ShowDialog();
             InitializeComponent();
         }
     }

@@ -56,6 +56,7 @@
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Command\RelayParameterCommand.cs" />
     <Compile Include="Command\SimpleCommand.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Scenarios\WindowsScenarioA.xaml.cs">
       <DependentUpon>WindowsScenarioA.xaml</DependentUpon>
@@ -65,6 +66,9 @@
     </Compile>
     <Compile Include="Scenarios\WindowsScenarioC.xaml.cs">
       <DependentUpon>WindowsScenarioC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\WindowsScenarioD.xaml.cs">
+      <DependentUpon>WindowsScenarioD.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CustomerAddViewModel.cs" />
     <Compile Include="ViewModel\CustomerListClassicBetterViewModel.cs" />
@@ -110,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\WindowsScenarioC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\WindowsScenarioD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
