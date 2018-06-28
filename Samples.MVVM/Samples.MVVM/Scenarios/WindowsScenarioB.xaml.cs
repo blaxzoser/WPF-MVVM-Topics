@@ -15,7 +15,11 @@ using System.Windows.Shapes;
 namespace Samples.MVVM.Scenarios
 {
     /// <summary>
-    /// Interaction logic for WindowsScenarioTree.xaml
+    //--Added scenario B:
+    //-Create good approach to MVVM
+    //-Implement INotifyPropertyChanged
+    //-Use Extra Class like a Model
+    //-Improve scenario A
     /// </summary>
     public partial class WindowsScenarioB : Window
     {
