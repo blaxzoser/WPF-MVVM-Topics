@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:Samples.MVVM.Scenarios"
         xmlns:View="clr-namespace:Samples.MVVM.View" x:Class="Samples.MVVM.Scenarios.WindowsScenarioD"
         mc:Ignorable="d"
-        Title="Scenario D" Height="450" Width="800">
-    <Grid>
+        Title="Scenario D" Height="450" Width="1123.909">
+    <Grid Margin="0,0,466.6,0">
 
-        <View:CustomerAddView HorizontalAlignment="Left" Height="343" Margin="24,43,0,0" VerticalAlignment="Top" Width="256" RenderTransformOrigin="0.5,0.5">
+        <View:CustomerAddView HorizontalAlignment="Left" Height="405" Margin="27,9,0,0" VerticalAlignment="Top" Width="256" RenderTransformOrigin="0.5,0.5">
             <View:CustomerAddView.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,7 @@
     <Compile Include="Command\SimpleCommand.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Model\CustomerModel.cs" />
+    <Compile Include="Model\SuperCustomerModel.cs" />
     <Compile Include="Scenarios\WindowsScenarioA.xaml.cs">
       <DependentUpon>WindowsScenarioA.xaml</DependentUpon>
     </Compile>
@@ -70,13 +72,20 @@
     <Compile Include="Scenarios\WindowsScenarioD.xaml.cs">
       <DependentUpon>WindowsScenarioD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\WindowsScenarioE.xaml.cs">
+      <DependentUpon>WindowsScenarioE.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\CustomerAddViewModel.cs" />
+    <Compile Include="ViewModel\CustomerGridViewModel.cs" />
     <Compile Include="ViewModel\CustomerListClassicBetterViewModel.cs" />
     <Compile Include="ViewModel\CustomerListClassicViewModel.cs" />
     <Compile Include="ViewModel\CustomerListComboModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="View\CustomerAddView.xaml.cs">
       <DependentUpon>CustomerAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomerGridView.xaml.cs">
+      <DependentUpon>CustomerGridView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CustomerListClassicView.xaml.cs">
       <DependentUpon>CustomerListClassicView.xaml</DependentUpon>
@@ -92,6 +101,9 @@
     </Compile>
     <Compile Include="View\CustomerListView.xaml.cs">
       <DependentUpon>CustomerListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomerValidationView.xaml.cs">
+      <DependentUpon>CustomerValidationView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -121,7 +133,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\WindowsScenarioE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\CustomerAddView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomerGridView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CustomerListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomerValidationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

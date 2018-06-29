@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CustomerRepository.cs" />
     <Compile Include="ICustomer.cs" />
+    <Compile Include="MemoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

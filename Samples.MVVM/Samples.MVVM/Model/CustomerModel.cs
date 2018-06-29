@@ -61,6 +61,27 @@ namespace Samples.MVVM.Model
             }
         }
 
+        private bool _isAlive;
+        public bool IsAlive
+        {
+            get
+            {
+                return _isAlive;
+            }
+            set
+            {
+                if (_isAlive != value)
+                {
+                    _isAlive = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("IsAlive"));
+                }
+
+            }
+        }
+
+
+
+
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
     }
 }

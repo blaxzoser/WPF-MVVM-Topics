@@ -11,5 +11,6 @@ namespace Sample.Repository
         void Add(Customer customer);
         void Update();
         List<Nationality> GetAllNationalities();
+        void Delete(Customer customer);
     }
 }

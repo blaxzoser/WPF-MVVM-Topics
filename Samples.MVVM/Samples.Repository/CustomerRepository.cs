@@ -7,8 +7,6 @@ namespace Sample.Repository
     public class CustomerRepository : ICustomer
     {
 
-
-
         public void Add(Customer customer)
         {
             throw new NotImplementedException();
@@ -37,6 +35,11 @@ namespace Sample.Repository
             list.Add(new Nationality() { Description = "Oceania", NationalityID = 3 });
             list.Add(new Nationality() { Description = "IT", NationalityID = 4 });
             return list;
+        }
+
+        public void Delete(Customer customer)
+        {
+            throw new NotImplementedException();
         }
     }
 }

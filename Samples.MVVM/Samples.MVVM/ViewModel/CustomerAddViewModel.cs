@@ -2,6 +2,7 @@
 using Sample.Repository;
 using Samples.MVVM.Command;
 using Samples.MVVM.Model;
+using Samples.Repository;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,11 +15,15 @@ namespace Samples.MVVM.ViewModel
 {
     public class CustomerAddViewModel : INotifyPropertyChanged
     {
+        #region Interfaces
         private ICustomer _customerRepository;
+        #endregion
 
-
+        #region Commands
         public RelayCommand AddCommand { get; set; }
+        #endregion
 
+        #region Properties
         private CustomerModel _customerMode;
         public CustomerModel CustomerModel
         {
@@ -36,6 +41,8 @@ namespace Samples.MVVM.ViewModel
             }
         }
 
+
+        public ObservableCollection<Customer> Customers { get; set; }
         public ObservableCollection<Nationality> Nationalities { get; set; }
 
         private Nationality _selectedNationality;
@@ -51,6 +58,23 @@ namespace Samples.MVVM.ViewModel
                 {
                     _selectedNationality = value;
                     PropertyChanged(this, new PropertyChangedEventArgs("SelectedNationality"));
+                }
+            }
+        }
+
+        private int _totalCustomers;
+        public int TotalCustomers
+        {
+            get
+            {
+                return _totalCustomers;
+            }
+            set
+            {
+                if (_totalCustomers != value)
+                {
+                    _totalCustomers = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("TotalCustomers"));
                 }
             }
         }
@@ -72,9 +96,6 @@ namespace Samples.MVVM.ViewModel
             }
         }
 
-
-
-
         private bool _hasChilds;
         public bool HasChilds
         {
@@ -92,15 +113,27 @@ namespace Samples.MVVM.ViewModel
             }
         }
 
+        #endregion
 
+        #region Constructor
         public CustomerAddViewModel()
         {
-            _customerRepository = new CustomerRepository();
-            CustomerModel = new CustomerModel();
-            HasNationality = true;
+            _customerRepository = new MemoryRepository();
             Nationalities = new ObservableCollection<Nationality>(_customerRepository.GetAllNationalities());
+            CustomerModel = new CustomerModel();
+            AddCommand = new RelayCommand(OnAdd);
+            Refresh();
         }
 
+        public void Refresh()
+        {
+            HasNationality = true;
+            TotalCustomers = _customerRepository.Get().Count;
+        }
+
+        #endregion
+
+        #region Methods
         private Customer CastToModel(CustomerModel customerModel)
         {
             Customer newCustomer = new Customer();
@@ -114,7 +147,7 @@ namespace Samples.MVVM.ViewModel
         {
             return CastToModel(this.CustomerModel);
         }
-
+        
         private bool CanAdd()
         {
             return true;
@@ -124,14 +157,13 @@ namespace Samples.MVVM.ViewModel
         {
             var newCustomer = AddCustomer();
             _customerRepository.Add(newCustomer);
+            Refresh();
         }
+        #endregion
 
-
-
-
+        #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
-
-
+        #endregion
 
 
     }

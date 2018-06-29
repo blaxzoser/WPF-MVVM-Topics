@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Samples.MVVM.View"
              xmlns:conv="clr-namespace:Samples.MVVM.Converters"
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="300">
+             d:DesignHeight="400" d:DesignWidth="300">
     <UserControl.Resources>
         <conv:BooleanToVisibilityConverter x:Key="BoolConvert"></conv:BooleanToVisibilityConverter>
     </UserControl.Resources>
@@ -24,6 +24,7 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <Label x:Name="labelName" 
                Content="Name" 
@@ -31,7 +32,8 @@
                Grid.Row="0" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" ></Label>
-        <TextBox x:Name="textboxName" 
+        <TextBox x:Name="textboxName"
+                 Text="{Binding CustomerModel.Name}"
                  Grid.Column="1" 
                  Grid.Row="0" 
                  Height="30" 
@@ -46,6 +48,7 @@
                HorizontalAlignment="Center" 
                VerticalAlignment="Top"></Label>
         <TextBox x:Name="textboxPhone"
+                 Text="{Binding CustomerModel.Phone}"
                  Grid.Column="2" 
                  Grid.Row="1" 
                  Height="30" 
@@ -60,6 +63,7 @@
                HorizontalAlignment="Center" 
                VerticalAlignment="Top"></Label>
         <TextBox x:Name="textboxLastName"  
+                Text="{Binding CustomerModel.LastName}"
                  Grid.Column="1" 
                  Grid.Row="2" 
                  Height="30" 
@@ -119,6 +123,7 @@
             </StackPanel>
         </GroupBox>
         <Button x:Name="ButtonAdd" 
+                Command="{Binding  AddCommand}"
                 Background="Black" 
                 Foreground="White" 
                 Width="100" 
@@ -129,5 +134,9 @@
                 HorizontalAlignment="Center" 
                 Margin="30" >
         </Button>
+        <StackPanel Grid.Row="8" Grid.ColumnSpan="2">
+            <Label>Numbers of Customers:</Label>
+            <Label x:Name="labelTotalCustomers" Content="{Binding TotalCustomers}"></Label>
+        </StackPanel>
     </Grid>
 </UserControl>
