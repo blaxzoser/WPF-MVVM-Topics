@@ -16,7 +16,11 @@ using System.Windows.Shapes;
 namespace Samples.MVVM.Scenarios
 {
     /// <summary>
-    /// Interaction logic for WindowsScenarioE.xaml
+    /// -Add new Scenario E
+    /// Use an ancestorType in grid view
+    /// Create custom Data Grid
+    /// Added button in Data Grid
+    /// How to use a custom button
     /// </summary>
     public partial class WindowsScenarioE : Window
     {

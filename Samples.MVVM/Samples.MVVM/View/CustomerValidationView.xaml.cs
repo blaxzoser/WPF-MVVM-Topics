@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Samples.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,10 +19,11 @@ namespace Samples.MVVM.View
     /// <summary>
     /// Interaction logic for CustomerValidationView.xaml
     /// </summary>
-    public partial class CustomerValidationView : Page
+    public partial class CustomerValidationView : UserControl
     {
         public CustomerValidationView()
         {
+            this.DataContext = new CustomerValidationViewModel();
             InitializeComponent();
         }
     }

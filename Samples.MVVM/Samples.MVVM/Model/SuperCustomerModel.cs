@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Samples.MVVM.Library;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +11,13 @@ using System.Windows.Controls;
 
 namespace Samples.MVVM.Model
 {
-    public class SuperCustomerModel : INotifyPropertyChanged, INotifyDataErrorInfo
+    public class SuperCustomerModel : ValidatableBindableBase
     {
 
         private string _name;
-        [Required(ErrorMessage = "We need the name")]
+        [Display(Name = "Name")]
+        [Required]
+        [StringLength(5)]
         public string Name
         {
             get
@@ -23,12 +26,8 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if (_name != value)
-                {
-                    _name = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Name"));
-                    ValidateProperty("Name", value);
-                }
+                SetProperty(ref _name, value);
+
             }
         }
 
@@ -43,15 +42,17 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if (_lastName != value)
-                {
-                    _lastName = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("LastName"));
-                }
+                SetProperty(ref _lastName, value);
+
+                if (value == "abc")
+                    base.AddError(nameof(LastName), "abc not allowed");
+                else
+                    base.RemoveError(nameof(LastName));
             }
         }
 
         private string _phone;
+
         [Phone]
         public string Phone
         {
@@ -61,12 +62,7 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if (_phone != value)
-                {
-                    _phone = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Phone"));
-                }
-
+                SetProperty(ref _phone, value);
             }
         }
 
@@ -80,11 +76,7 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if (_email != value)
-                {
-                    _email = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Email"));
-                }
+                SetProperty(ref _email, value);
             }
         }
 
@@ -97,17 +89,13 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if (_age != value)
-                {
-                    _age = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Age"));
-                }
+                SetProperty(ref _age, value);
             }
         }
 
         private string _comments;
-        [StringLength(maximumLength:10,MinimumLength =5)]
-        public string Commens
+        [StringLength(maximumLength:10,MinimumLength =1)]
+        public string Comments
         {
             get
             {
@@ -115,50 +103,8 @@ namespace Samples.MVVM.Model
             }
             set
             {
-                if (_comments != value)
-                {
-                    _comments = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Commens"));
-                }
+                SetProperty(ref _comments, value);
             }
         }
-
-
-
-
-        private Dictionary<string, List<string>> _erros = new Dictionary<string, List<string>>();
-        public bool HasErrors => _erros.Count > 0;
-        public event PropertyChangedEventHandler PropertyChanged = delegate { };
-        public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
-        public IEnumerable GetErrors(string propertyName)
-        {
-            if(_erros.ContainsKey(propertyName))
-            {
-                return _erros[propertyName];
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        private void ValidateProperty(string propertyName, object value)
-        {
-            var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
-            ValidationContext validationContext = new ValidationContext(this);
-            validationContext.MemberName = propertyName;
-            Validator.TryValidateProperty(value, validationContext, results);
-           if (_erros.Any())
-            {
-                _erros[propertyName] = results.Select(c => c.ErrorMessage).ToList();
-            }
-           else
-           {
-                _erros.Remove(propertyName);
-           }
-            ErrorsChanged(this, new DataErrorsChangedEventArgs(propertyName));
-        }
-
-
     }
 }

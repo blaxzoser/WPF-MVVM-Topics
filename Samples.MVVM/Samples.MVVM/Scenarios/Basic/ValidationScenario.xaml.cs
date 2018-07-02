@@ -10,20 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM
+namespace Samples.MVVM.Scenarios.Basic
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///Added Scenario F Validations:
+    //-How to use a INotifyDataErrorInfo
+    //-Refactor INotifyPropertyChanged
+    //-Put Style in errors in the View
+    //-Validation Approach
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ValidationScenario : Window
     {
-        public MainWindow()
+        public ValidationScenario()
         {
-            Scenarios.Basic.ValidationScenario newWindows = new Scenarios.Basic.ValidationScenario();
-            newWindows.ShowDialog();
             InitializeComponent();
         }
     }

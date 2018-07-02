@@ -58,8 +58,13 @@
     <Compile Include="Command\RelayParameterCommand.cs" />
     <Compile Include="Command\SimpleCommand.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Library\BindableBase.cs" />
+    <Compile Include="Library\ValidatableBindableBase.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\SuperCustomerModel.cs" />
+    <Compile Include="Scenarios\Basic\ValidationScenario.xaml.cs">
+      <DependentUpon>ValidationScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\WindowsScenarioA.xaml.cs">
       <DependentUpon>WindowsScenarioA.xaml</DependentUpon>
     </Compile>
@@ -80,6 +85,7 @@
     <Compile Include="ViewModel\CustomerListClassicBetterViewModel.cs" />
     <Compile Include="ViewModel\CustomerListClassicViewModel.cs" />
     <Compile Include="ViewModel\CustomerListComboModel.cs" />
+    <Compile Include="ViewModel\CustomerValidationViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="View\CustomerAddView.xaml.cs">
       <DependentUpon>CustomerAddView.xaml</DependentUpon>
@@ -117,6 +123,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Scenarios\Basic\ValidationScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\WindowsScenarioA.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -205,6 +215,10 @@
       <Project>{b7d502e3-fc53-436e-b284-0e3d82de1ffc}</Project>
       <Name>Samples.Repository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scenarios\Hard\" />
+    <Folder Include="Scenarios\Medium\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
