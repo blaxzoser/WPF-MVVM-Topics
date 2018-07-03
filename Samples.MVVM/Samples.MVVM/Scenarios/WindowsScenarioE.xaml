@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Samples.MVVM.Scenarios"
         mc:Ignorable="d"
         Title="Scenario E" Height="450" Width="800">
-    <Grid><View:CustomerGridView />
-        
+    <Grid>
+        <View:CustomerGridView />
     </Grid>
 </Window>

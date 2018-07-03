@@ -10,20 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM
+namespace Samples.MVVM.Scenarios.Medium
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NavigationScenario.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NavigationScenario : Window
     {
-        public MainWindow()
+        public NavigationScenario()
         {
-            var newWindows = new Scenarios.Medium.NavigationScenario();
-            newWindows.ShowDialog();
             InitializeComponent();
         }
     }

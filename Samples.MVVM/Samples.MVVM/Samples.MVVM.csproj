@@ -36,6 +36,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,9 +64,21 @@
     <Compile Include="Library\ValidatableBindableBase.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\SuperCustomerModel.cs" />
+    <Compile Include="Product\ProductAddView.xaml.cs">
+      <DependentUpon>ProductAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductListView.xaml.cs">
+      <DependentUpon>ProductListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductListViewModel.cs" />
+    <Compile Include="Product\ProductAddViewModel.cs" />
     <Compile Include="Scenarios\Basic\ValidationScenario.xaml.cs">
       <DependentUpon>ValidationScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Medium\NavigationScenario.xaml.cs">
+      <DependentUpon>NavigationScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Medium\NavigationScenarioViewModel.cs" />
     <Compile Include="Scenarios\WindowsScenarioA.xaml.cs">
       <DependentUpon>WindowsScenarioA.xaml</DependentUpon>
     </Compile>
@@ -123,7 +137,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Product\ProductAddView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Product\ProductListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Basic\ValidationScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Medium\NavigationScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,7 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scenarios\Hard\" />
-    <Folder Include="Scenarios\Medium\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
