@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Scenario A" Height="450" Width="800">
     <Grid>
-       <View:CustomerListClassicView />
+       <View:CustomerListClassicView  />
     </Grid>
 </Window>

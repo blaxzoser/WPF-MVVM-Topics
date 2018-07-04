@@ -15,7 +15,11 @@ using System.Windows.Shapes;
 namespace Samples.MVVM.Scenarios.Medium
 {
     /// <summary>
-    /// Interaction logic for NavigationScenario.xaml
+    /// Scenario Navigation And Comunication between view models
+    /// Separete Concerns in View and ViewModel
+    /// Create XAML objects
+    /// Approach Main ViewModel to navegation 
+    /// Approach ContentControl
     /// </summary>
     public partial class NavigationScenario : Window
     {

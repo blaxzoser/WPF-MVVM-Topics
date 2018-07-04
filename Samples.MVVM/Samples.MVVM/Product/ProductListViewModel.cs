@@ -12,8 +12,18 @@ namespace Samples.MVVM.Product
 {
     public class ProductListViewModel : BindableBase
     {
+        private Sample.Entities.Product _selectedProduct;
+        public Sample.Entities.Product SelectedProduct
+        {
+            get { return _selectedProduct; }
+            set { SetProperty(ref _selectedProduct, value); }
+        }
         public ObservableCollection<Sample.Entities.Product> Products { get; set; }
+
         public RelayParameterCommand<Sample.Entities.Product> DetailsCommand { get; set; }
+
+        public event Action<int> PlaceDetailsRequested = delegate { };
+
         public IProduct _IProduct;
 
         public ProductListViewModel()
@@ -25,7 +35,7 @@ namespace Samples.MVVM.Product
 
         private void OnDetails(Sample.Entities.Product product)
         {
-
+            PlaceDetailsRequested(product.ProductID);
         }
 
     }

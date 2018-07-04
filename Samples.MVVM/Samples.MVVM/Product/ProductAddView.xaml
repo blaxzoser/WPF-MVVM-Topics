@@ -7,6 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label  Style="{StaticResource TitleText}"   Content="Added/Detail Product" ></Label>
+        <StackPanel>
+            <Label  Content="Added/Detail Product" ></Label>
+            <Label Content="{Binding ProductID}"></Label>
+        </StackPanel>
     </Grid>
 </UserControl>

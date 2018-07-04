@@ -11,9 +11,13 @@ namespace Samples.MVVM.Scenarios.Medium
 {
     public class NavigationScenarioViewModel : BindableBase
     {
+
+        #region ViewModels
         private ProductListViewModel _productListViewModel = new ProductListViewModel();
         private ProductAddViewModel _productAddViewModel = new ProductAddViewModel();
+        #endregion
 
+        #region Properties
         public BindableBase _CurrentViewModel;
         public BindableBase CurrentViewModel
         {
@@ -21,12 +25,26 @@ namespace Samples.MVVM.Scenarios.Medium
             set { SetProperty(ref _CurrentViewModel, value); }
 
         }
+        #endregion
 
+        #region Commands
         public RelayParameterCommand<string> NavCommand { get; set; }
+        #endregion
 
+        #region Contructor
         public NavigationScenarioViewModel()
         {
             NavCommand = new RelayParameterCommand<string>(OnNav, OnEnabled);
+            _productListViewModel.PlaceDetailsRequested += _productListViewModel_PlaceDetailsRequested;
+        }
+        #endregion
+
+        #region Methods
+        private void _productListViewModel_PlaceDetailsRequested(int obj)
+        {
+            _productAddViewModel.ProductID = obj;
+            CurrentViewModel = _productAddViewModel;
+
         }
 
         private bool OnEnabled(object destination)
@@ -50,5 +68,6 @@ namespace Samples.MVVM.Scenarios.Medium
                 break;
             }
         }
+        #endregion
     }
 }

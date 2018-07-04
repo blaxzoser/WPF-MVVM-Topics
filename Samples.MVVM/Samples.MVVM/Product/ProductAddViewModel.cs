@@ -9,5 +9,11 @@ namespace Samples.MVVM.Product
 {
     public  class ProductAddViewModel : BindableBase
     {
+        private int _productID;
+        public int ProductID
+        {
+            get { return _productID; }
+            set { SetProperty(ref _productID, value); }
+        }
     }
 }
