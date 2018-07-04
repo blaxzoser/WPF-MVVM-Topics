@@ -24,11 +24,8 @@ namespace Samples.MVVM.Product
 
         public event Action<int> PlaceDetailsRequested = delegate { };
 
-        public IProduct _IProduct;
-
-        public ProductListViewModel()
+        public ProductListViewModel(IProduct _IProduct)
         {
-            _IProduct = new ProductRepository();
             Products = new ObservableCollection<Sample.Entities.Product>(_IProduct.Get());
             DetailsCommand = new RelayParameterCommand<Sample.Entities.Product>(OnDetails);
         }

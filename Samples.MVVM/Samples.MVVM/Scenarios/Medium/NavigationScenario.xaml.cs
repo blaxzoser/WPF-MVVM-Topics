@@ -20,6 +20,7 @@ namespace Samples.MVVM.Scenarios.Medium
     /// Create XAML objects
     /// Approach Main ViewModel to navegation 
     /// Approach ContentControl
+    /// Use external library 'Unity' to Depency Injection and Ioc
     /// </summary>
     public partial class NavigationScenario : Window
     {

@@ -1,6 +1,7 @@
 ﻿using Samples.MVVM.Command;
 using Samples.MVVM.Library;
 using Samples.MVVM.Product;
+using Samples.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,11 @@ namespace Samples.MVVM.Scenarios.Medium
 {
     public class NavigationScenarioViewModel : BindableBase
     {
+        #region Repository
+        #endregion
 
         #region ViewModels
-        private ProductListViewModel _productListViewModel = new ProductListViewModel();
+        private ProductListViewModel _productListViewModel;
         private ProductAddViewModel _productAddViewModel = new ProductAddViewModel();
         #endregion
 
@@ -33,7 +36,9 @@ namespace Samples.MVVM.Scenarios.Medium
 
         #region Contructor
         public NavigationScenarioViewModel()
-        {
+        {        
+            _productListViewModel = ContainerHelper.ResolveAll<ProductListViewModel>();
+            
             NavCommand = new RelayParameterCommand<string>(OnNav, OnEnabled);
             _productListViewModel.PlaceDetailsRequested += _productListViewModel_PlaceDetailsRequested;
         }
