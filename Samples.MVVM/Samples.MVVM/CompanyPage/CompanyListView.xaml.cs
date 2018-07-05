@@ -13,17 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM
+namespace Samples.MVVM.CompanyPage
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CompanyListView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CompanyListView : UserControl
     {
-        public MainWindow()
+        public CompanyListView()
         {
-            var newWindows = new Scenarios.Hard.BindingCoreScenario();
-            newWindows.ShowDialog();
             InitializeComponent();
         }
     }
