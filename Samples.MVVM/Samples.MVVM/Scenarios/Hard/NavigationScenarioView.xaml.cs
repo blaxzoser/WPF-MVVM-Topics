@@ -10,9 +10,10 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM.Scenarios.Medium
+namespace Samples.MVVM.Scenarios.Hard
 {
     /// <summary>
     /// Scenario Navigation And Comunication between view models
@@ -22,9 +23,9 @@ namespace Samples.MVVM.Scenarios.Medium
     /// Approach ContentControl
     /// Use external library 'Unity' to Depency Injection and Ioc
     /// </summary>
-    public partial class NavigationScenario : Window
+    public partial class NavigationScenarioView : Window
     {
-        public NavigationScenario()
+        public NavigationScenarioView()
         {
             InitializeComponent();
         }

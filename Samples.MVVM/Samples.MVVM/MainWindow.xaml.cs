@@ -22,7 +22,7 @@ namespace Samples.MVVM
     {
         public MainWindow()
         {
-            var newWindows = new Scenarios.Hard.HiarchicalDataTemplates();
+            var newWindows = new Scenarios.Hard.NavigationScenarioView();
             newWindows.ShowDialog();
             InitializeComponent();
         }

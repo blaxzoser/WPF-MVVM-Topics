@@ -1,14 +1,13 @@
 ﻿using Samples.MVVM.Command;
 using Samples.MVVM.Library;
 using Samples.MVVM.Product;
-using Samples.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Samples.MVVM.Scenarios.Medium
+namespace Samples.MVVM.Scenarios.Hard
 {
     public class NavigationScenarioViewModel : BindableBase
     {
@@ -36,9 +35,9 @@ namespace Samples.MVVM.Scenarios.Medium
 
         #region Contructor
         public NavigationScenarioViewModel()
-        {        
+        {
             _productListViewModel = ContainerHelper.ResolveAll<ProductListViewModel>();
-            
+
             NavCommand = new RelayParameterCommand<string>(OnNav, OnEnabled);
             _productListViewModel.PlaceDetailsRequested += _productListViewModel_PlaceDetailsRequested;
         }
@@ -55,7 +54,7 @@ namespace Samples.MVVM.Scenarios.Medium
         private bool OnEnabled(object destination)
         {
             return true;
-            
+
         }
 
         private void OnNav(object destination)
@@ -70,7 +69,7 @@ namespace Samples.MVVM.Scenarios.Medium
                     break;
                 default:
                     CurrentViewModel = _CurrentViewModel;
-                break;
+                    break;
             }
         }
         #endregion

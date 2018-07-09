@@ -21,8 +21,8 @@
                     <DataGridTextColumn Header="Cost" Binding="{Binding Cost}" />
                     <DataGridTextColumn Header="Date Register"   Binding="{Binding DateRegister}" />
                     <DataGridTemplateColumn Header="Details">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
+                        <DataGridTemplateColumn.CellTemplate >
+                            <DataTemplate >
                                 <Button  x:Name="btnDetails" 
                                          CommandParameter="{Binding DataContext.SelectedProduct,
                                          RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"

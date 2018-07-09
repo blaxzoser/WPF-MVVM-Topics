@@ -113,10 +113,10 @@
     <Compile Include="Scenarios\Hard\HiarchicalDataTemplatesScenarioView.xaml.cs">
       <DependentUpon>HiarchicalDataTemplatesScenarioView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenarios\Medium\NavigationScenario.xaml.cs">
-      <DependentUpon>NavigationScenario.xaml</DependentUpon>
+    <Compile Include="Scenarios\Hard\NavigationScenarioView.xaml.cs">
+      <DependentUpon>NavigationScenarioView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenarios\Medium\NavigationScenarioViewModel.cs" />
+    <Compile Include="Scenarios\Hard\NavigationScenarioViewModel.cs" />
     <Compile Include="Scenarios\WindowsScenarioA.xaml.cs">
       <DependentUpon>WindowsScenarioA.xaml</DependentUpon>
     </Compile>
@@ -204,7 +204,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Scenarios\Medium\NavigationScenario.xaml">
+    <Page Include="Scenarios\Hard\NavigationScenarioView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -298,6 +298,8 @@
       <Name>Samples.Repository</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scenarios\Medium\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
