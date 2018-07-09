@@ -18,7 +18,7 @@
             <Setter Property="Background" Value="White"></Setter>
         </Style>
 
-        <Style TargetType="TextBox">
+        <!--<Style TargetType="TextBox">
             <Setter Property="Background" Value="Aqua"></Setter>
             <Style.Triggers>
                 <Trigger Property="IsFocused"  Value="True">
@@ -34,6 +34,6 @@
                             ></Setter>
                 </Trigger>
             </Style.Triggers>
-        </Style>
+        </Style>-->
     </Application.Resources>
 </Application>

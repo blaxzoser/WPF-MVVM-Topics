@@ -13,5 +13,6 @@ namespace Sample.Entities
         public decimal Cost { get; set; }
         public DateTime DateRegister { get; set; }
 
+        public List<Customer> Customers { get; set; }
     }
 }

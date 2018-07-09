@@ -107,6 +107,12 @@
     <Compile Include="Scenarios\Hard\BindingCoreScenario.xaml.cs">
       <DependentUpon>BindingCoreScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Hard\DataTemplateScenario.xaml.cs">
+      <DependentUpon>DataTemplateScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Hard\HiarchicalDataTemplatesScenarioView.xaml.cs">
+      <DependentUpon>HiarchicalDataTemplatesScenarioView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Medium\NavigationScenario.xaml.cs">
       <DependentUpon>NavigationScenario.xaml</DependentUpon>
     </Compile>
@@ -133,6 +139,7 @@
     <Compile Include="ViewModel\CustomerListComboModel.cs" />
     <Compile Include="ViewModel\CustomerValidationViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\HiarchicalDataTemplatesScenarioViewModel.cs" />
     <Compile Include="View\CustomerAddView.xaml.cs">
       <DependentUpon>CustomerAddView.xaml</DependentUpon>
     </Compile>
@@ -186,6 +193,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\Hard\BindingCoreScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Hard\DataTemplateScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Hard\HiarchicalDataTemplatesScenarioView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

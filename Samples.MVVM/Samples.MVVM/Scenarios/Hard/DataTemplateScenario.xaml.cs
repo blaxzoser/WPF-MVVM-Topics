@@ -1,5 +1,4 @@
-﻿using Samples.MVVM.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM.View
+namespace Samples.MVVM.Scenarios.Hard
 {
     /// <summary>
-    /// Interaction logic for CustomerListComboDataType.xaml
+    /// Interaction logic for DataTemplateScenario.xaml
     /// </summary>
-    public partial class CustomerListComboDataType : UserControl
+    public partial class DataTemplateScenario : Window
     {
-        public CustomerListComboDataType()
+        public DataTemplateScenario()
         {
             InitializeComponent();
         }

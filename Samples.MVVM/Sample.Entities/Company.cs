@@ -13,5 +13,7 @@ namespace Sample.Entities
         public int NumberEmployes { get; set; }
         public DateTime Register { get; set; }
         public Decimal Budget { get; set; }
+
+        public List<Product> Products { get; set; }
     }
 }

@@ -11,18 +11,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM.View
+namespace Samples.MVVM.Scenarios.Hard
 {
     /// <summary>
-    /// Interaction logic for CustomerListComboDataType.xaml
+    /// Interaction logic for HiarchicalDataTemplates.xaml
     /// </summary>
-    public partial class CustomerListComboDataType : UserControl
+    public partial class HiarchicalDataTemplates : Window
     {
-        public CustomerListComboDataType()
+        public HiarchicalDataTemplates()
         {
+            this.DataContext = new HiarchicalDataTemplatesScenarioViewModel();
             InitializeComponent();
         }
     }

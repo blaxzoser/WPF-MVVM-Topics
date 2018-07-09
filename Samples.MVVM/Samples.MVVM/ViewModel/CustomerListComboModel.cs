@@ -28,9 +28,10 @@ namespace Samples.MVVM.ViewModel
         private ICustomer _customerRepository;
         public CustomerListComboModel()
         {
-            _customerRepository = new CustomerRepository();
-            Customers = new ObservableCollection<Customer>(_customerRepository.Get());
-        }
+           
+                _customerRepository = new CustomerRepository();
+                Customers = new ObservableCollection<Customer>(_customerRepository.Get());
+        }   
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 

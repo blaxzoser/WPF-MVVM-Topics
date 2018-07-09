@@ -4,20 +4,29 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Samples.MVVM.View"
+             xmlns:viewmodel ="clr-namespace:Samples.MVVM.ViewModel"
              xmlns:data="clr-namespace:Sample.Entities;assembly=Sample.Entities"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewmodel:CustomerListComboModel>
+        </viewmodel:CustomerListComboModel>
+    </UserControl.DataContext>
     <UserControl.Resources>
-        <DataTemplate  DataType="{x:Type data:Customer}" >
+        <DataTemplate x:Key="templateExplicit"  >
             <StackPanel>
-                <TextBlock Text="{ Binding Name}"></TextBlock>
-                <TextBlock Text="{ Binding LastName}"></TextBlock>
-                <TextBlock Text="{ Binding Phone}"></TextBlock>
+                <TextBlock Text="{Binding Name}"></TextBlock>
+                <TextBlock Text="{Binding LastName}"></TextBlock>
+                <TextBlock Text="{Binding Phone}"></TextBlock>
+                <TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ListBox},Path=ItemsSource.Count}"></TextBlock>
+                <TextBlock Text="{Binding ElementName=listBoxCustomers, Path=ItemsSource.Count}"></TextBlock>
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
     <Grid>
-        <ListBox ItemsSource="{Binding Customers}"
+        <ListBox  x:Name="listBoxCustomers"
+                 ItemTemplate="{StaticResource templateExplicit}" 
+                 ItemsSource="{Binding Customers}"
                  />
     </Grid>
 </UserControl>
