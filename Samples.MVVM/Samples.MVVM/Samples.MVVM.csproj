@@ -103,11 +103,17 @@
     </Compile>
     <Compile Include="Product\ProductListViewModel.cs" />
     <Compile Include="Product\ProductAddViewModel.cs" />
+    <Compile Include="Scenarios\Basic\BindingCoreScenario.xaml.cs">
+      <DependentUpon>BindingCoreScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Basic\CommandsVsEventsScenario.xaml.cs">
       <DependentUpon>CommandsVsEventsScenario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Basic\ConvertsScenario.xaml.cs">
       <DependentUpon>ConvertsScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Basic\DataTemplateScenario.xaml.cs">
+      <DependentUpon>DataTemplateScenario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Basic\GoodScenarioViewModel.xaml.cs">
       <DependentUpon>GoodScenarioViewModel.xaml</DependentUpon>
@@ -121,12 +127,6 @@
     <Compile Include="Scenarios\Basic\ValidationScenario.xaml.cs">
       <DependentUpon>ValidationScenario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenarios\Hard\BindingCoreScenario.xaml.cs">
-      <DependentUpon>BindingCoreScenario.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Scenarios\Hard\DataTemplateScenario.xaml.cs">
-      <DependentUpon>DataTemplateScenario.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Scenarios\Hard\HiarchicalDataTemplatesScenarioView.xaml.cs">
       <DependentUpon>HiarchicalDataTemplatesScenarioView.xaml</DependentUpon>
     </Compile>
@@ -139,6 +139,12 @@
     </Compile>
     <Compile Include="Scenarios\Medium\BehaviorsScenarioView.xaml.cs">
       <DependentUpon>BehaviorsScenarioView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Medium\DepencyPropertiesScenario.xaml.cs">
+      <DependentUpon>DepencyPropertiesScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Medium\TriggersScenario.xaml.cs">
+      <DependentUpon>TriggersScenario.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BehaviorsScenarioViewModel.cs" />
     <Compile Include="ViewModel\CustomerAddViewModel.cs" />
@@ -197,11 +203,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Basic\BindingCoreScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Basic\CommandsVsEventsScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\Basic\ConvertsScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Basic\DataTemplateScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -221,14 +235,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Scenarios\Hard\BindingCoreScenario.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Scenarios\Hard\DataTemplateScenario.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Scenarios\Hard\HiarchicalDataTemplatesScenarioView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -242,6 +248,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\Medium\BehaviorsScenarioView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Medium\DepencyPropertiesScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Medium\TriggersScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

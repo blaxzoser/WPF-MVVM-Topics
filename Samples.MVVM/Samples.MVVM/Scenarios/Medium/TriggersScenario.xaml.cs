@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM.Scenarios.Hard
+namespace Samples.MVVM.Scenarios.Medium
 {
     /// <summary>
-    /// Interaction logic for BindingCoreScenario.xaml
+    /// Interaction logic for TriggersScenario.xaml
     /// </summary>
-    public partial class BindingCoreScenario : Window
+    public partial class TriggersScenario : Window
     {
-        public BindingCoreScenario()
+        public TriggersScenario()
         {
             InitializeComponent();
         }
