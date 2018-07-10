@@ -12,18 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM.Scenarios
+namespace Samples.MVVM.Scenarios.Hard
 {
     /// <summary>
-    //--Added scenario B:
-    //-Create good approach to MVVM
-    //-Implement INotifyPropertyChanged
-    //-Use Extra Class like a Model
-    //-Improve scenario A
+    /// Interaction logic for ThreadingScenario.xaml
     /// </summary>
-    public partial class WindowsScenarioB : Window
+    public partial class ThreadingScenario : Window
     {
-        public WindowsScenarioB()
+        public ThreadingScenario()
         {
             InitializeComponent();
         }

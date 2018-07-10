@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM.Scenarios
+namespace Samples.MVVM.Scenarios.Basic
 {
     /// <summary>
     /// Basic Scenario A in  MVVM
@@ -24,9 +24,9 @@ namespace Samples.MVVM.Scenarios
     //-Use ItemTemplate for Combo Box, ListView with Binding
     //-Use some Tricks to communication ViewMode and View(not recomment, its a hack)
     /// </summary>
-    public partial class WindowsScenarioA : Window
+    public partial class BadScenarioViewModel : Window
     {
-        public WindowsScenarioA()
+        public BadScenarioViewModel()
         {
             InitializeComponent();
         }

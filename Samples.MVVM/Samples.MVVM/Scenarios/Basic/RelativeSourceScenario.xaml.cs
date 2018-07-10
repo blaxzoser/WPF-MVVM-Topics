@@ -1,5 +1,4 @@
-﻿using Samples.MVVM.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM.Scenarios
+namespace Samples.MVVM.Scenarios.Basic
 {
     /// <summary>
     /// -Add new Scenario E
@@ -22,10 +21,10 @@ namespace Samples.MVVM.Scenarios
     /// Added button in Data Grid
     /// How to use a custom button
     /// </summary>
-    public partial class WindowsScenarioE : Window
+    public partial class RelativeSourceScenario : Window
     {
-        public WindowsScenarioE()
-        {     
+        public RelativeSourceScenario()
+        {
             InitializeComponent();
         }
     }

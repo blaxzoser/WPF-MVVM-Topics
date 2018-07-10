@@ -12,19 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM.Scenarios
+namespace Samples.MVVM.Scenarios.Basic
 {
     /// <summary>
-    //  -Add new Scenario D
-    //--Approch Add a object  from ViewModel
-    //--How to use a covert
-    //--How to use a boolean 
-    //--How to use a enabled propertie
-    //--how use a combo box
+    /// Scenario C:
+    /// Events vs Commands
+    /// Diffents kind of Commands
+    /// How to invoke in  View
+    /// How to paint in datagrid in view
+    /// The best practice 
     /// </summary>
-    public partial class WindowsScenarioD : Window
+    public partial class CommandsVsEventsScenario : Window
     {
-        public WindowsScenarioD()
+        public CommandsVsEventsScenario()
         {
             InitializeComponent();
         }

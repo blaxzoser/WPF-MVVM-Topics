@@ -103,6 +103,21 @@
     </Compile>
     <Compile Include="Product\ProductListViewModel.cs" />
     <Compile Include="Product\ProductAddViewModel.cs" />
+    <Compile Include="Scenarios\Basic\CommandsVsEventsScenario.xaml.cs">
+      <DependentUpon>CommandsVsEventsScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Basic\ConvertsScenario.xaml.cs">
+      <DependentUpon>ConvertsScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Basic\GoodScenarioViewModel.xaml.cs">
+      <DependentUpon>GoodScenarioViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Basic\BadScenarioViewModel.xaml.cs">
+      <DependentUpon>BadScenarioViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Basic\RelativeSourceScenario.xaml.cs">
+      <DependentUpon>RelativeSourceScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Basic\ValidationScenario.xaml.cs">
       <DependentUpon>ValidationScenario.xaml</DependentUpon>
     </Compile>
@@ -119,23 +134,11 @@
       <DependentUpon>NavigationScenarioView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Hard\NavigationScenarioViewModel.cs" />
+    <Compile Include="Scenarios\Hard\ThreadingScenario.xaml.cs">
+      <DependentUpon>ThreadingScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Medium\BehaviorsScenarioView.xaml.cs">
       <DependentUpon>BehaviorsScenarioView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Scenarios\WindowsScenarioA.xaml.cs">
-      <DependentUpon>WindowsScenarioA.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Scenarios\WindowsScenarioB.xaml.cs">
-      <DependentUpon>WindowsScenarioB.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Scenarios\WindowsScenarioC.xaml.cs">
-      <DependentUpon>WindowsScenarioC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Scenarios\WindowsScenarioD.xaml.cs">
-      <DependentUpon>WindowsScenarioD.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Scenarios\WindowsScenarioE.xaml.cs">
-      <DependentUpon>WindowsScenarioE.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BehaviorsScenarioViewModel.cs" />
     <Compile Include="ViewModel\CustomerAddViewModel.cs" />
@@ -194,6 +197,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Basic\CommandsVsEventsScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Basic\ConvertsScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Basic\GoodScenarioViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Basic\BadScenarioViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Basic\RelativeSourceScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Basic\ValidationScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -214,27 +237,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Hard\ThreadingScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Medium\BehaviorsScenarioView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Scenarios\WindowsScenarioA.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Scenarios\WindowsScenarioB.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Scenarios\WindowsScenarioC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Scenarios\WindowsScenarioD.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Scenarios\WindowsScenarioE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
