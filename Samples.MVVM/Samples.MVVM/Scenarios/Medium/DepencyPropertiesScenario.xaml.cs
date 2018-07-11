@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sample.Entities;
+using Samples.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +23,31 @@ namespace Samples.MVVM.Scenarios.Medium
     {
         public DepencyPropertiesScenario()
         {
-            InitializeComponent();
+            InitializeComponent();        
+            Load();
+            DataContext = this;
         }
+
+
+        private void Load()
+        {
+            Customers = new List<Customer>();
+            Customers.Add(new Customer() { Name = "Luis", LastName = "Pintado", Phone = 234324 });
+            Customers.Add(new Customer() { Name = "Jorge", LastName = "Perez", Phone = 545346 });
+            Customers.Add(new Customer() { Name = "Tomas", LastName = "Smit", Phone = 86778678 });
+        }
+
+        public List<Customer> Customers
+        {
+            get { return (List<Customer>)GetValue(CustomersProperty); }
+            set { SetValue(CustomersProperty, value); }
+        }
+
+        public static readonly DependencyProperty CustomersProperty =
+         DependencyProperty.RegisterAttached("Customers", 
+             typeof(List<Customer>), 
+             typeof(DepencyPropertyViewModel),
+             new PropertyMetadata(null)
+             );
     }
 }

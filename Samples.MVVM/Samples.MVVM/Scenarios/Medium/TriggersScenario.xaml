@@ -5,8 +5,90 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Samples.MVVM.Scenarios.Medium"
         mc:Ignorable="d"
-        Title="TriggersScenario" Height="450" Width="800">
+        Title="Triggers Scenario" Height="450" Width="800">
     <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBox">
+                <Style.Triggers>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition Property="Text" Value="Test"></Condition>
+                            <Condition Property="IsEnabled" Value="True"></Condition>
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter Property="Foreground" Value="Pink"></Setter>
+                            <Setter Property="Background" Value="Blue"></Setter>
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <TabControl>
+            <TabItem Header="Simple Approach">
+                <StackPanel>
+                    <TextBlock Text="Test" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style  TargetType="{x:Type TextBlock}" >
+                                <Setter Property="Foreground" Value="Red"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="Blue" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="DataTrigger">
+                <StackPanel>
+                    <CheckBox Name="cbSample" Content="Yes?" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="48" Text="Yes">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=cbSample, Path=IsChecked}" Value="True">
+                                        <Setter Property="Foreground" Value="Green" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Event triggers">
+                <TextBlock Name="lblStyled" Text="Test!" FontSize="58" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <EventTrigger RoutedEvent="MouseEnter">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="FontSize" To="100" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseLeave">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0:0:0.800" Storyboard.TargetProperty="FontSize" To="58" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </TabItem>
+            <TabItem Header="Multi Triggers">
+                <TextBox></TextBox>
+            </TabItem>
+        </TabControl>
         
+     
     </Grid>
 </Window>
