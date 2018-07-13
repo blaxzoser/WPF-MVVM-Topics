@@ -26,7 +26,7 @@ namespace Samples.MVVM.CustomControls
         }
 
         private static void OnIsRedBackgroundChanged(DependencyObject source,DependencyPropertyChangedEventArgs e)
-        {
+        {            
             TiempoSlackPanel panel = source as TiempoSlackPanel;
             if (panel.IsRedBackground)
                 panel.Background = System.Windows.Media.Brushes.Red;

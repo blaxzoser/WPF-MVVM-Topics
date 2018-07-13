@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Samples.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,20 +11,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM
+namespace Samples.MVVM.Scenarios.Hard
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for GooAsyncScenario.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GoodAsyncScenario : Window
     {
-        public MainWindow()
+        public GoodAsyncScenario()
         {
-            var newWindows = new Scenarios.Hard.CommandAsyncScenario();
-            newWindows.ShowDialog();
+            this.DataContext = new GoodAsyncScenarioViewModel();
             InitializeComponent();
         }
     }

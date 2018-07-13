@@ -1,16 +1,12 @@
-﻿<Window x:Class="Samples.MVVM.Scenarios.Hard.ThreadingScenario"
+﻿<Window x:Class="Samples.MVVM.Scenarios.Hard.BadAsynchronousScenario"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Samples.MVVM.Scenarios.Hard"
         mc:Ignorable="d"
-        Title="ThreadingScenario" Height="450" Width="800">
+        Title="Bad Asynchronous Scenario" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click2" ></Button>
-            <TextBox x:Name="txtResult"></TextBox>
-            <Label  x:Name="lblMessage" ></Label>
-        </StackPanel>
+        <Label Content="{Binding UrlByteCount}"/>
     </Grid>
 </Window>

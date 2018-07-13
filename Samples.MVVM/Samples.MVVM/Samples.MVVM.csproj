@@ -82,6 +82,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command\AsyncCommand.cs" />
+    <Compile Include="Command\AsyncCommandBase.cs" />
+    <Compile Include="Command\IAsyncCommand.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Command\RelayParameterCommand.cs" />
     <Compile Include="Command\SimpleCommand.cs" />
@@ -93,6 +96,7 @@
     <Compile Include="CustomControls\TiempoSlackPanel.cs" />
     <Compile Include="Library\BindableBase.cs" />
     <Compile Include="Library\ContainerHelper.cs" />
+    <Compile Include="Library\NotifyTaskCompletion.cs" />
     <Compile Include="Library\ValidatableBindableBase.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\SuperCustomerModel.cs" />
@@ -128,6 +132,15 @@
     <Compile Include="Scenarios\Basic\ValidationScenario.xaml.cs">
       <DependentUpon>ValidationScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Hard\BadAsynchronousScenario.xaml.cs">
+      <DependentUpon>BadAsynchronousScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Hard\CommandAsyncScenario.xaml.cs">
+      <DependentUpon>CommandAsyncScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Hard\GoodAsyncScenario.xaml.cs">
+      <DependentUpon>GoodAsyncScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Hard\HiarchicalDataTemplatesScenarioView.xaml.cs">
       <DependentUpon>HiarchicalDataTemplatesScenarioView.xaml</DependentUpon>
     </Compile>
@@ -135,6 +148,9 @@
       <DependentUpon>NavigationScenarioView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Hard\NavigationScenarioViewModel.cs" />
+    <Compile Include="Scenarios\Hard\ServiceAsynScenario.xaml.cs">
+      <DependentUpon>ServiceAsynScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Hard\ThreadingScenario.xaml.cs">
       <DependentUpon>ThreadingScenario.xaml</DependentUpon>
     </Compile>
@@ -147,7 +163,9 @@
     <Compile Include="Scenarios\Medium\TriggersScenario.xaml.cs">
       <DependentUpon>TriggersScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\BadAsynchronousScenarioViewModel.cs" />
     <Compile Include="ViewModel\BehaviorsScenarioViewModel.cs" />
+    <Compile Include="ViewModel\CommandAsyncScenarioViewModel.cs" />
     <Compile Include="ViewModel\CustomerAddViewModel.cs" />
     <Compile Include="ViewModel\CustomerGridViewModel.cs" />
     <Compile Include="ViewModel\CustomerListClassicBetterViewModel.cs" />
@@ -156,6 +174,7 @@
     <Compile Include="ViewModel\CustomerValidationViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="ViewModel\DepencyPropertyViewModel.cs" />
+    <Compile Include="ViewModel\GoodAsyncScenarioViewModel.cs" />
     <Compile Include="ViewModel\HiarchicalDataTemplatesScenarioViewModel.cs" />
     <Compile Include="View\CustomerAddView.xaml.cs">
       <DependentUpon>CustomerAddView.xaml</DependentUpon>
@@ -237,11 +256,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Hard\BadAsynchronousScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Hard\CommandAsyncScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Hard\GoodAsyncScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Hard\HiarchicalDataTemplatesScenarioView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\Hard\NavigationScenarioView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Hard\ServiceAsynScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -329,6 +364,10 @@
     <ProjectReference Include="..\Samples.Repository\Samples.Repository.csproj">
       <Project>{b7d502e3-fc53-436e-b284-0e3d82de1ffc}</Project>
       <Name>Samples.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Services\Samples.Services.csproj">
+      <Project>{46D80E20-E5EF-4CD8-9549-184D36DCBF54}</Project>
+      <Name>Samples.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
