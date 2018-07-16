@@ -11,7 +11,13 @@ namespace Samples.MVVM.ViewModel
 {
     public class CommandAsyncScenarioViewModel : BindableBase
     {
-        public string Url { get; set; }
+        public string _Url;
+        public string Url
+        {
+            get { return _Url; }
+            set { SetProperty(ref _Url, value); }
+
+        }
         public IAsyncCommand CountUrlBytesCommand { get; private set; }
         public int ByteCount { get; private set; }
         private ServiceFake _service;
@@ -20,9 +26,7 @@ namespace Samples.MVVM.ViewModel
         {
             Url = "http://www.salon51.com.mx/";
             _service = new ServiceFake();
-            CountUrlBytesCommand = new AsyncCommand<int>(() =>           
-              _service.DownloadAndCountBytesAsync(Url)
-            );
+            CountUrlBytesCommand = AsyncCommand.Create(token => _service.DownloadAndCountBytesAsync(Url, token));
 
         }
     }

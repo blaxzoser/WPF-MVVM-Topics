@@ -4,29 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Samples.MVVM.Scenarios.Hard"
-        xmlns:conv="clr-namespace:Samples.MVVM.Converters"
+        xmlns:converters="clr-namespace:Samples.MVVM.Converters"
         mc:Ignorable="d"
         Title="Command Async Scenario" Height="450" Width="800">
     <Window.Resources>
-        <conv:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></conv:BooleanToVisibilityConverter>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter">
+        </converters:BooleanToVisibilityConverter>
+        <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter">
+        </converters:NullToVisibilityConverter>
     </Window.Resources>
     <Grid>
-        <TextBox Text="{Binding Url}" />
-        <Button Command="{Binding CountUrlBytesCommand}"  Content="Go" />
-        <Grid Visibility="{Binding CountUrlBytesCommand.Execution,
-    Converter={StaticResource BooleanToVisibilityConverter}}">
+        <TextBox Text="{Binding Url}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="23" Margin="10,10,10,10" />
+        <Button Command="{Binding CountUrlBytesCommand}" Content="Go" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,38,10,10" Width="75"/>
+        <Button Command="{Binding CountUrlBytesCommand.CancelCommand}" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,38,0,0" Width="75"/>
+        <Grid Visibility="{Binding CountUrlBytesCommand.Execution, Converter={StaticResource NullToVisibilityConverter}}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,63,10,10">
             <!--Busy indicator-->
-            <Label Visibility="{Binding CountUrlBytesCommand.Execution.IsNotCompleted,
-      Converter={StaticResource BooleanToVisibilityConverter}}"
-      Content="Loading..." />
+            <Label Content="Loading..." Visibility="{Binding CountUrlBytesCommand.Execution.IsNotCompleted, Converter={StaticResource BooleanToVisibilityConverter}}" />
             <!--Results-->
-            <Label Content="{Binding CountUrlBytesCommand.Execution.Result}"
-      Visibility="{Binding CountUrlBytesCommand.Execution.IsSuccessfullyCompleted,
-      Converter={StaticResource BooleanToVisibilityConverter}}" />
+            <Label Content="{Binding CountUrlBytesCommand.Execution.Result}" Visibility="{Binding CountUrlBytesCommand.Execution.IsSuccessfullyCompleted, Converter={StaticResource BooleanToVisibilityConverter}}" />
             <!--Error details-->
-            <Label Content="{Binding CountUrlBytesCommand.Execution.ErrorMessage}"
-      Visibility="{Binding CountUrlBytesCommand.Execution.IsFaulted,
-      Converter={StaticResource BooleanToVisibilityConverter}}" Foreground="Red" />
+            <Label Content="{Binding CountUrlBytesCommand.Execution.ErrorMessage}" Visibility="{Binding CountUrlBytesCommand.Execution.IsFaulted, Converter={StaticResource BooleanToVisibilityConverter}}" Foreground="Red" />
+            <!--Canceled-->
+            <Label Content="Canceled" Visibility="{Binding CountUrlBytesCommand.Execution.IsCanceled, Converter={StaticResource BooleanToVisibilityConverter}}" Foreground="Blue" />
         </Grid>
     </Grid>
 </Window>

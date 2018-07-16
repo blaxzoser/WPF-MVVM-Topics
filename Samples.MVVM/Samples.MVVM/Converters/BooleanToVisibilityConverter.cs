@@ -29,4 +29,5 @@ namespace Samples.MVVM.Converters
             throw new NotImplementedException();
         }
     }
+
 }

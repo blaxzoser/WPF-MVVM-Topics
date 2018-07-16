@@ -84,6 +84,7 @@
     </ApplicationDefinition>
     <Compile Include="Command\AsyncCommand.cs" />
     <Compile Include="Command\AsyncCommandBase.cs" />
+    <Compile Include="Command\CancelAsyncCommand.cs" />
     <Compile Include="Command\IAsyncCommand.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Command\RelayParameterCommand.cs" />
@@ -93,6 +94,7 @@
     </Compile>
     <Compile Include="CompanyPage\CompanyListViewModel.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="CustomControls\TiempoSlackPanel.cs" />
     <Compile Include="Library\BindableBase.cs" />
     <Compile Include="Library\ContainerHelper.cs" />
