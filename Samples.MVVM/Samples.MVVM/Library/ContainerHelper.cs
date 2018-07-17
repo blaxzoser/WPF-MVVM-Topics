@@ -18,6 +18,10 @@ namespace Samples.MVVM.Library
             _container.RegisterType<IProduct, ProductRepository>(new ContainerControlledLifetimeManager());
 
         }
+        public static void RegisterType<T>()
+        {
+             _container.RegisterType<T>();
+        }
 
         public static T ResolveAll<T>()
         {

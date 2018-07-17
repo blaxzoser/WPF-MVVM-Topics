@@ -178,6 +178,7 @@
     <Compile Include="ViewModel\DepencyPropertyViewModel.cs" />
     <Compile Include="ViewModel\GoodAsyncScenarioViewModel.cs" />
     <Compile Include="ViewModel\HiarchicalDataTemplatesScenarioViewModel.cs" />
+    <Compile Include="ViewModel\ServiceAsynScenarioViewModel.cs" />
     <Compile Include="View\CustomerAddView.xaml.cs">
       <DependentUpon>CustomerAddView.xaml</DependentUpon>
     </Compile>

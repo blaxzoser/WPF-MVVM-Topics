@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Samples.Services
 {
-    public class ServiceFake
+    public class ServiceFake : IFakeService
     {
         public  async Task<int> CountBytesInUrlAsync(string url)
         {
@@ -40,6 +40,17 @@ namespace Samples.Services
             {
                 var data = await
                   response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
+                return data.Length;
+            }
+        }
+
+        public async Task<int> DownloadAndCountBytesAsync(string url)
+        {
+            await Task.Delay(TimeSpan.FromSeconds(10)).ConfigureAwait(false);
+            using (var client = new HttpClient())
+            {
+                var data = await
+                  client.GetByteArrayAsync(url).ConfigureAwait(false);
                 return data.Length;
             }
         }
