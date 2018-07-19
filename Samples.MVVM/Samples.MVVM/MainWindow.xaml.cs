@@ -22,7 +22,7 @@ namespace Samples.MVVM
     {
         public MainWindow()
         {
-            var newWindows = new Scenarios.Hard.ServiceAsynScenario();
+            var newWindows = new Scenarios.Medium.ResourcesScenario();
             newWindows.ShowDialog();
             InitializeComponent();
         }
