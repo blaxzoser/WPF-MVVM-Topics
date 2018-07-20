@@ -8,11 +8,11 @@
         mc:Ignorable="d"
         Title="Resources Scenario" Height="450" Width="800">
     <Window.Resources>
-        <Color x:Key="tiempoRedColor">#FF0033</Color>
-        <Color x:Key="tiempoColor">#00BCD4</Color>
+        <Color x:Key="localColorA">#FF0033</Color>
+        <Color x:Key="localColorB">#00BCD4</Color>
         
-        <SolidColorBrush x:Key="tiempoAlterColorBrush"  Color="#00BCD4"></SolidColorBrush>
-        <SolidColorBrush  x:Key="tiempoColorBrush"  Color="#f68a06"></SolidColorBrush>
+        <SolidColorBrush x:Key="localAlterColorBrush"  Color="#00BCD4"></SolidColorBrush>
+        <SolidColorBrush  x:Key="localColorBrush"  Color="#f68a06"></SolidColorBrush>
         
         <sys:String x:Key="tiempoTitle">Samples Resources</sys:String>
         <sys:Double x:Key="pi">3.1416</sys:Double>
@@ -27,14 +27,14 @@
 
                     <Label x:Name="lblStaticResource" 
                    Content="Static Recourse" 
-                   Background="{StaticResource tiempoColorBrush}"></Label>
+                   Background="{StaticResource localColorBrush}"></Label>
 
                     <Label x:Name="lblDynamicRecource"                    
                    Content="Dynamic Recourse" 
-                   Background="{DynamicResource tiempoColorBrush}"></Label>
+                   Background="{DynamicResource localColorBrush}"></Label>
 
                     <Button  Content="Change"  
-                     BorderBrush="{StaticResource tiempoAlterColorBrush}" 
+                     BorderBrush="{StaticResource localAlterColorBrush}" 
                      Click="Button_Click"  
                      Width="{StaticResource tiempoWidth}" ></Button>
                 </StackPanel>
@@ -44,6 +44,13 @@
                     <Image Source="sample2.png" Width="200" Height="100"></Image>
                     <Image Source="pack://application:,,,/Resources/Image/sample.jpg" Width="200" Height="100"></Image>
                     <Image x:Name="image" Source="sample3.jpg" Width="200" Height="100"></Image>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Skin">
+                <StackPanel>
+                    <Button Content="Button"></Button>
+                    <Label Content="Label"></Label>
+                    <TextBlock Text="Textbox" Background="{DynamicResource  TiempoSolidColorBrush}" ></TextBlock>
                 </StackPanel>
             </TabItem>
         </TabControl>

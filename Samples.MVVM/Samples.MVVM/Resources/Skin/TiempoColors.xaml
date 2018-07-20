@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Samples.MVVM.Resources.Skin">
+    <SolidColorBrush x:Key="TiempoSolidColorBrush" Color="LightSeaGreen" ></SolidColorBrush>
+    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="tiempoBackGroundColor">
+        <GradientStop Offset="0" Color="Green"/>
+        <GradientStop Offset="0.4" Color="PeachPuff"/>
+        <GradientStop Offset="0.7" Color="Pink"/>
+        <GradientStop Offset="1" Color="Silver"/>
+    </LinearGradientBrush>
+</ResourceDictionary>

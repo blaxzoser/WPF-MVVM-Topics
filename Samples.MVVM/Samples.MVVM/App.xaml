@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Samples.MVVM"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="Label">
+        <!--<Style TargetType="Label">
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
             <Setter Property="FontSize" Value="14"/>
@@ -16,9 +16,9 @@
             <Setter Property="FontSize" Value="26"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="Background" Value="White"></Setter>
-        </Style>
+        </Style>-->
 
-        <Style TargetType="TextBox">
+        <!--<Style TargetType="TextBox">
             <Setter Property="Background" Value="Aqua"></Setter>
             <Style.Triggers>
                 <Trigger Property="IsFocused"  Value="True">
@@ -34,6 +34,12 @@
                             ></Setter>
                 </Trigger>
             </Style.Triggers>
-            </Style>
+            </Style>-->
+    <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Skin/TiempoColors.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Skin/TiempoDictionary.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
