@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Computation.cs" />
     <Compile Include="CustomerRepository.cs" />
     <Compile Include="ICompany.cs" />
+    <Compile Include="IComputation.cs" />
     <Compile Include="ICustomer.cs" />
     <Compile Include="IProduct.cs" />
     <Compile Include="MemoryCompanyRepository.cs" />

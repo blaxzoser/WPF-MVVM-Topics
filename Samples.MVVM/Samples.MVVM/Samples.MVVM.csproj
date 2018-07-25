@@ -85,6 +85,8 @@
     <Compile Include="Command\AsyncCommand.cs" />
     <Compile Include="Command\AsyncCommandBase.cs" />
     <Compile Include="Command\CancelAsyncCommand.cs" />
+    <Compile Include="Command\ComputationCancelCommand.cs" />
+    <Compile Include="Command\ComputationStartCommand.cs" />
     <Compile Include="Command\IAsyncCommand.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Command\RelayParameterCommand.cs" />
@@ -110,6 +112,7 @@
     </Compile>
     <Compile Include="Product\ProductListViewModel.cs" />
     <Compile Include="Product\ProductAddViewModel.cs" />
+    <Compile Include="Progress\ProgressReport.cs" />
     <Compile Include="Scenarios\Basic\BindingCoreScenario.xaml.cs">
       <DependentUpon>BindingCoreScenario.xaml</DependentUpon>
     </Compile>
@@ -162,6 +165,9 @@
     <Compile Include="Scenarios\Medium\DepencyPropertiesScenario.xaml.cs">
       <DependentUpon>DepencyPropertiesScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Medium\DesignTimeScenario.xaml.cs">
+      <DependentUpon>DesignTimeScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Medium\ResourcesScenario.xaml.cs">
       <DependentUpon>ResourcesScenario.xaml</DependentUpon>
     </Compile>
@@ -179,8 +185,10 @@
     <Compile Include="ViewModel\CustomerValidationViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="ViewModel\DepencyPropertyViewModel.cs" />
+    <Compile Include="ViewModel\DesignTimeViewModel.cs" />
     <Compile Include="ViewModel\GoodAsyncScenarioViewModel.cs" />
     <Compile Include="ViewModel\HiarchicalDataTemplatesScenarioViewModel.cs" />
+    <Compile Include="ViewModel\ProgressViewModel.cs" />
     <Compile Include="ViewModel\ServiceAsynScenarioViewModel.cs" />
     <Compile Include="View\CustomerAddView.xaml.cs">
       <DependentUpon>CustomerAddView.xaml</DependentUpon>
@@ -205,6 +213,9 @@
     </Compile>
     <Compile Include="View\CustomerValidationView.xaml.cs">
       <DependentUpon>CustomerValidationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DesignTimeView.xaml.cs">
+      <DependentUpon>DesignTimeView.xaml</DependentUpon>
     </Compile>
     <Page Include="CompanyPage\CompanyListView.xaml">
       <SubType>Designer</SubType>
@@ -306,6 +317,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Medium\DesignTimeScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Medium\ResourcesScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -343,6 +358,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CustomerValidationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DesignTimeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

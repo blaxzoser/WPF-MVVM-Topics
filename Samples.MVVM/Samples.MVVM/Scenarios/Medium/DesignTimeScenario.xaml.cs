@@ -10,21 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Samples.MVVM
+namespace Samples.MVVM.Scenarios.Medium
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DesignTimeScenario.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DesignTimeScenario : Window
     {
-        public MainWindow()
+        public DesignTimeScenario()
         {
-            var newWindows = new Scenarios.Medium.DesignTimeScenario();
-            newWindows.ShowDialog();
             InitializeComponent();
+            this.DataContext = new ViewModel.DesignTimeViewModel();
         }
     }
 }
