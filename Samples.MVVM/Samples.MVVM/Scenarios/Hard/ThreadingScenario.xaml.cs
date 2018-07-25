@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,12 +27,11 @@ namespace Samples.MVVM.Scenarios.Hard
             InitializeComponent();
         }
 
-        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        private void btnUpdate_Click1(object sender, RoutedEventArgs e)
         {
             Task.Run(() =>
             {
-                HttpClient webclient = new HttpClient();
-                var html = webclient.GetStringAsync("http://www.salon51.com.mx/").Result;
+                Thread.Sleep(1000);
                 txtResult.Dispatcher.Invoke(() =>
                 {
                     txtResult.Text = "Done";

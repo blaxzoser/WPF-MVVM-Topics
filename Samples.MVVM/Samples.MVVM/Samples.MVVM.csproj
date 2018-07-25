@@ -162,17 +162,35 @@
     <Compile Include="Scenarios\Medium\BehaviorsScenarioView.xaml.cs">
       <DependentUpon>BehaviorsScenarioView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Medium\CanvasScenario.xaml.cs">
+      <DependentUpon>CanvasScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Medium\DepencyPropertiesScenario.xaml.cs">
       <DependentUpon>DepencyPropertiesScenario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Medium\DesignTimeScenario.xaml.cs">
       <DependentUpon>DesignTimeScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Medium\PageScenario.xaml.cs">
+      <DependentUpon>PageScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Medium\PanelScenario.xaml.cs">
+      <DependentUpon>PanelScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Medium\GridLayoutScenario.xaml.cs">
+      <DependentUpon>GridLayoutScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Medium\ResourcesScenario.xaml.cs">
       <DependentUpon>ResourcesScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Medium\ScrollViewerScenario.xaml.cs">
+      <DependentUpon>ScrollViewerScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Medium\TriggersScenario.xaml.cs">
       <DependentUpon>TriggersScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Medium\ViewBoxScenario.xaml.cs">
+      <DependentUpon>ViewBoxScenario.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BadAsynchronousScenarioViewModel.cs" />
     <Compile Include="ViewModel\BehaviorsScenarioViewModel.cs" />
@@ -313,6 +331,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Medium\CanvasScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Medium\DepencyPropertiesScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -321,11 +343,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Medium\PageScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Medium\PanelScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Medium\GridLayoutScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Medium\ResourcesScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Medium\ScrollViewerScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Medium\TriggersScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Medium\ViewBoxScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
