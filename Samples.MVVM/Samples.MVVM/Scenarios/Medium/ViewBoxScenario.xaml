@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Samples.MVVM.Scenarios.Medium"
         mc:Ignorable="d"
-        Title="ViewBoxScenario" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="View Box Scenario" Height="450" Width="800">
+    <Viewbox Stretch="Uniform" StretchDirection="Both">
+        <StackPanel Margin="15">
+            <Border Width="150"  Height="100" BorderBrush="Red" BorderThickness="3">
+                <Viewbox Stretch="None">
+                    <Image Source="pack://application:,,,/Resources/Image/sample.jpg"></Image>
+                </Viewbox>
+            </Border>
+            <Border Width="150" Height="100"  BorderBrush="Red" BorderThickness="3">
+                <Viewbox Stretch="Fill">
+                    <Image Source="pack://application:,,,/Resources/Image/sample.jpg"></Image>
+                </Viewbox>
+            </Border>
+            <Border Width="150" Height="100"  BorderBrush="Red" BorderThickness="3">
+                <Viewbox Stretch="Uniform">
+                    <Image Source="pack://application:,,,/Resources/Image/sample.jpg"></Image>
+                </Viewbox>
+            </Border>
+            <Border Width="150" Height="100"  BorderBrush="Red" BorderThickness="3">
+                <Viewbox Stretch="UniformToFill">
+                    <Image Source="pack://application:,,,/Resources/Image/sample.jpg"></Image>
+                </Viewbox>
+            </Border>
+        </StackPanel>
+    </Viewbox>
 </Window>

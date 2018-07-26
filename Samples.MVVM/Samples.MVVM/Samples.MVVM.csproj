@@ -104,6 +104,9 @@
     <Compile Include="Library\ValidatableBindableBase.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\SuperCustomerModel.cs" />
+    <Compile Include="NavigationMain.xaml.cs">
+      <DependentUpon>NavigationMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product\ProductAddView.xaml.cs">
       <DependentUpon>ProductAddView.xaml</DependentUpon>
     </Compile>
@@ -251,6 +254,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NavigationMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Product\ProductAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

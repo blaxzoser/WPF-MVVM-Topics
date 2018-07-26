@@ -7,11 +7,23 @@
         mc:Ignorable="d"
         Title="Panel Scenario" Height="450" Width="800">
     <StackPanel>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
+        <Button Content="Sample" 
+                Height="45"
+                Width="90"
+                Margin="20"
+                HorizontalContentAlignment="Left" 
+                VerticalContentAlignment="Top" ></Button>
+        <Button Content="Sample" 
+                HorizontalContentAlignment="Right" 
+                VerticalContentAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Width="45" 
+                Margin="20"
+                Height="90">
+        </Button>
         <Button Content="Sample"></Button>
     </StackPanel>
-    <!--<WrapPanel Width="500" >
+    <!--<WrapPanel Width="500" ItemWidth="200" >
         <Button Content="Sample"></Button>
         <Button Content="Sample"></Button>
         <Button Content="Sample"></Button>
@@ -32,7 +44,7 @@
         <Button Content="Sample"></Button>
         <Button Content="Sample"></Button>
     </WrapPanel>-->
-    <!--<DockPanel>
+    <!--<DockPanel LastChildFill="True">
         <Button Content="Top" DockPanel.Dock="Top"></Button>
         <Button Content="Left" DockPanel.Dock="Left"></Button>
         <Button Content="Right" DockPanel.Dock="Right"></Button>

@@ -16,14 +16,12 @@ using System.Windows.Shapes;
 namespace Samples.MVVM
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NavigationMain.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NavigationMain : Page
     {
-        public MainWindow()
+        public NavigationMain()
         {
-            var newWindows = new Scenarios.Medium.ViewBoxScenario();
-            newWindows.ShowDialog();
             InitializeComponent();
         }
     }

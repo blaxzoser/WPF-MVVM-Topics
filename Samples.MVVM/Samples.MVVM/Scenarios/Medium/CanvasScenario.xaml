@@ -7,8 +7,15 @@
         mc:Ignorable="d"
         Title="CanvasScenario" Height="450" Width="800">
     <Canvas>
-        <Button Content="Sample" Canvas.Top="55" Canvas.Left="120"></Button>
-        <Button Content="Sample 2" Canvas.Top="100" Canvas.Left="599"></Button>
-        <Button Content="Sample 3" Canvas.Top="300" Canvas.Left="300"></Button>
+        <Button Content="Sample" Canvas.Top="55" Canvas.Left="120" Background="Pink"></Button>
+        <Button Content="Sample 1.1" Canvas.Top="60" Canvas.Left="130" Background="AliceBlue"></Button>
+        <Button Content="Sample 2" Canvas.Top="100" Canvas.Left="99" Width="500" >
+            <Button.RenderTransform>
+                <RotateTransform Angle="10"></RotateTransform>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Sample 3" Background="Blue" Canvas.Top="300" Canvas.Left="300"></Button>
+        <Rectangle Fill="Red" Width="100" Height="200" Canvas.Top="200" Canvas.Left="300" Panel.ZIndex="-1"  >
+        </Rectangle>
 </Canvas>
 </Window>
