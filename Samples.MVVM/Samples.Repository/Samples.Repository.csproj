@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Computation.cs" />
+    <Compile Include="CustomerMockRepository.cs" />
     <Compile Include="CustomerRepository.cs" />
     <Compile Include="ICompany.cs" />
     <Compile Include="IComputation.cs" />

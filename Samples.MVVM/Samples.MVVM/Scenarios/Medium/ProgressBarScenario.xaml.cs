@@ -17,9 +17,9 @@ namespace Samples.MVVM.Scenarios.Medium
     /// <summary>
     /// Interaction logic for DesignTimeScenario.xaml
     /// </summary>
-    public partial class DesignTimeScenario : Window
+    public partial class ProgressBarScenario : Window
     {
-        public DesignTimeScenario()
+        public ProgressBarScenario()
         {
             InitializeComponent();
             this.DataContext = new ViewModel.DesignTimeViewModel();
