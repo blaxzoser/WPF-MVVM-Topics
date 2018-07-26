@@ -82,6 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AttachedProperty\AttachedPropertiesBehavior.cs" />
+    <Compile Include="AttachedProperty\AttachedPropertiesViewModel.cs" />
+    <Compile Include="AttachedProperty\InsertCommandViewModel.cs" />
+    <Compile Include="AttachedProperty\ViewModel.cs" />
     <Compile Include="Command\AsyncCommand.cs" />
     <Compile Include="Command\AsyncCommandBase.cs" />
     <Compile Include="Command\CancelAsyncCommand.cs" />
@@ -162,6 +166,9 @@
     <Compile Include="Scenarios\Hard\ThreadingScenario.xaml.cs">
       <DependentUpon>ThreadingScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Medium\AttachedPropertyScenario.xaml.cs">
+      <DependentUpon>AttachedPropertyScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Medium\BehaviorsScenarioView.xaml.cs">
       <DependentUpon>BehaviorsScenarioView.xaml</DependentUpon>
     </Compile>
@@ -211,6 +218,9 @@
     <Compile Include="ViewModel\HiarchicalDataTemplatesScenarioViewModel.cs" />
     <Compile Include="ViewModel\ProgressViewModel.cs" />
     <Compile Include="ViewModel\ServiceAsynScenarioViewModel.cs" />
+    <Compile Include="View\AttachedPropertyView.xaml.cs">
+      <DependentUpon>AttachedPropertyView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CustomerAddView.xaml.cs">
       <DependentUpon>CustomerAddView.xaml</DependentUpon>
     </Compile>
@@ -334,6 +344,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Medium\AttachedPropertyScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Medium\BehaviorsScenarioView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -375,6 +389,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\Medium\ViewBoxScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AttachedPropertyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

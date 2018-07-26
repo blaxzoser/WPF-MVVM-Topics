@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Samples.MVVM.View.AttachedPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
+             xmlns:ap ="clr-namespace:Samples.MVVM.AttachedProperty"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+
+    <UserControl.DataContext>
+        <ap:ViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   Text="Count Value:   " />
+        <TextBlock Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Text="{Binding Counter}" />
+        <Button Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"               
+                ap:AttachedPropertiesBehavior.ViewModelType="{x:Type ap:InsertCommandViewModel}"
+                Command="{Binding IncrementCommand}"
+                Content="Increment" />
+    </Grid>
+</UserControl>
