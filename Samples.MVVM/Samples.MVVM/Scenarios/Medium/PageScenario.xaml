@@ -9,6 +9,6 @@
       Title="PageScenario">
 
     <Grid>
-        
+        <Label Content="Page 2"></Label>
     </Grid>
 </Page>
