@@ -22,7 +22,11 @@ namespace Samples.MVVM
     {
         public MainWindow()
         {
+<<<<<<< HEAD
             var newWindows = new Scenarios.Medium.AttachedPropertyScenario();
+=======
+            var newWindows = new Scenarios.Medium.MockScenario();
+>>>>>>> Added new scnario features
             newWindows.ShowDialog();
             InitializeComponent();
         }

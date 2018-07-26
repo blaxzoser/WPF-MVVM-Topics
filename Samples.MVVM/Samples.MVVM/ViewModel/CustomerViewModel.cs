@@ -1,9 +1,11 @@
 ﻿using Sample.Entities;
 using Sample.Repository;
 using Samples.MVVM.Command;
+using Samples.Repository;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,12 +64,23 @@ namespace Samples.MVVM.ViewModel
 
         public CustomerViewModel()
         {
-            CustomerRepository = new CustomerRepository();
+
+            if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
+            {
+                CustomerRepository = new CustomerMockRepository();
+            }
+            else
+            {
+                CustomerRepository = new CustomerRepository();
+            }
             Customers = new ObservableCollection<Customer>(CustomerRepository.Get());
             DeleteCommand = new RelayCommand(OnDelete, CanDelete);
             AddCommand = new RelayParameterCommand<string>(OnAdd, CanAdd);
             MessageCommand = new SimpleCommand();
         }
+
+
+     
 
 
         #endregion

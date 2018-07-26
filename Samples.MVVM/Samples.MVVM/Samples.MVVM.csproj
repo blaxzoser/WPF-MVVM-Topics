@@ -178,8 +178,11 @@
     <Compile Include="Scenarios\Medium\DepencyPropertiesScenario.xaml.cs">
       <DependentUpon>DepencyPropertiesScenario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenarios\Medium\DesignTimeScenario.xaml.cs">
-      <DependentUpon>DesignTimeScenario.xaml</DependentUpon>
+    <Compile Include="Scenarios\Medium\MockScenario.xaml.cs">
+      <DependentUpon>MockScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Medium\ProgressBarScenario.xaml.cs">
+      <DependentUpon>ProgressBarScenario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Medium\PageScenario.xaml.cs">
       <DependentUpon>PageScenario.xaml</DependentUpon>
@@ -360,7 +363,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Scenarios\Medium\DesignTimeScenario.xaml">
+    <Page Include="Scenarios\Medium\MockScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Medium\ProgressBarScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
