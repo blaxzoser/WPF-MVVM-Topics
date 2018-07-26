@@ -22,7 +22,7 @@ namespace Samples.MVVM
     {
         public MainWindow()
         {
-            var newWindows = new Scenarios.Medium.ScrollViewerScenario();
+            var newWindows = new Scenarios.Medium.CanvasScenario();
             newWindows.ShowDialog();
             InitializeComponent();
         }
