@@ -46,12 +46,9 @@ namespace Samples.MVVM.AttachedProperty
         private void CreateNewDataContext(Type type)
         {
             if (_isBusy) return;
-            _isBusy = true;
-            Debug.Assert(_frameworkElement.DataContext != null, $"The was no DataContext for FrameworkElement");
+            _isBusy = true;           
             var newDataContext = Activator.CreateInstance(type);
-            Debug.Assert(newDataContext != null, $"Could not create an instance of type {type}");
             var property = type.GetProperty("ViewModel");
-            Debug.Assert(newDataContext != null, $"Could not access a 'ViewModel' property for type {type}");
             property.SetValue(newDataContext, _frameworkElement.DataContext);
             _frameworkElement.DataContext = newDataContext;
             _isBusy = false;
