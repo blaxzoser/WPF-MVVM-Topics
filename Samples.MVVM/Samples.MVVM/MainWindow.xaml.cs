@@ -22,9 +22,31 @@ namespace Samples.MVVM
     {
         public MainWindow()
         {
-            var newWindows = new Scenarios.Medium.AttachedPropertyScenario();
-            newWindows.ShowDialog();
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var currentValue = cbOptions.SelectionBoxItem.ToString();
+            switch (currentValue)
+            {
+                case "Controls":
+                    var newWindowsControl = new Scenarios.Basic.ConvertsScenario();
+                    newWindowsControl.ShowDialog();
+                    break;
+                case "Template":
+                    var newWindowsTemplate = new Scenarios.Basic.DataTemplateScenario();
+                    newWindowsTemplate.ShowDialog();
+                    break;
+                case "Style":
+                    var newWindowsStyle = new Scenarios.Medium.ResourcesScenario();
+                    newWindowsStyle.ShowDialog();
+                    break;
+                case "Theming":
+                    var newWindowsTheming = new Scenarios.Basic.ValidationScenario();
+                    newWindowsTheming.ShowDialog();
+                    break;
+            }
         }
     }
 }

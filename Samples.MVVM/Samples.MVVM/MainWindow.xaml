@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:Samples.MVVM"
         xmlns:View="clr-namespace:Samples.MVVM.View" x:Class="Samples.MVVM.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindows" Height="494.395" Width="800">
+        Title="WPF Scenarios" Height="150" Width="500">
     <Grid>
+        <StackPanel Margin="10">
+              <ComboBox x:Name="cbOptions" Width="300" Height="50">
+                  <ComboBoxItem>Controls</ComboBoxItem>
+                  <ComboBoxItem>Template</ComboBoxItem>
+                  <ComboBoxItem>Style</ComboBoxItem>
+                  <ComboBoxItem>Theming</ComboBoxItem>
+                </ComboBox>
+              <Button Width="300" Height="50" Content="Open" Click="Button_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>
