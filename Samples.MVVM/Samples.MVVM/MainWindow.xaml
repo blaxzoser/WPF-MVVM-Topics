@@ -9,12 +9,15 @@
         Title="WPF Scenarios" Height="150" Width="500">
     <Grid>
         <StackPanel Margin="10">
-              <ComboBox x:Name="cbOptions" Width="300" Height="50">
+              <ComboBox x:Name="cbOptions" Width="300" Height="50"   >
                   <ComboBoxItem>Controls</ComboBoxItem>
                   <ComboBoxItem>Template</ComboBoxItem>
                   <ComboBoxItem>Style</ComboBoxItem>
                   <ComboBoxItem>Theming</ComboBoxItem>
-                </ComboBox>
+                  <ComboBoxItem>Events</ComboBoxItem>
+                  <ComboBoxItem>Binding</ComboBoxItem>
+                <ComboBoxItem>BadScenario</ComboBoxItem>
+            </ComboBox>
               <Button Width="300" Height="50" Content="Open" Click="Button_Click"></Button>
         </StackPanel>
     </Grid>

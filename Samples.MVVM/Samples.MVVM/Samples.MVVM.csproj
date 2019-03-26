@@ -132,6 +132,9 @@
     <Compile Include="Scenarios\Basic\DataTemplateScenario.xaml.cs">
       <DependentUpon>DataTemplateScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Basic\EventsScenario.xaml.cs">
+      <DependentUpon>EventsScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Basic\GoodScenarioViewModel.xaml.cs">
       <DependentUpon>GoodScenarioViewModel.xaml</DependentUpon>
     </Compile>
@@ -300,6 +303,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\Basic\DataTemplateScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Basic\EventsScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

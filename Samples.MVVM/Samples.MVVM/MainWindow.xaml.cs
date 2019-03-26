@@ -22,8 +22,10 @@ namespace Samples.MVVM
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();         
         }
+
+       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -46,7 +48,23 @@ namespace Samples.MVVM
                     var newWindowsTheming = new Scenarios.Basic.ValidationScenario();
                     newWindowsTheming.ShowDialog();
                     break;
+
+                case "Events":
+                    var eventsScenario = new Scenarios.Basic.EventsScenario();
+                    eventsScenario.ShowDialog();
+                    break;
+                case "Binding":
+                    var bindinBindingCoreScenario = new Scenarios.Basic.BindingCoreScenario();
+                    bindinBindingCoreScenario.ShowDialog();
+                    break;
+                case "BadScenario":
+                    var badScenario = new Scenarios.Basic.GoodScenarioViewModel();
+                    badScenario.ShowDialog();
+                    break;
+
             }
         }
+
+        
     }
 }

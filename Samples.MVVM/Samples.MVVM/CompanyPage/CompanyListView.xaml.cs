@@ -23,6 +23,7 @@ namespace Samples.MVVM.CompanyPage
         public CompanyListView()
         {
             InitializeComponent();
+            this.DataContext = new CompanyListViewModel();
         }
     }
 }
