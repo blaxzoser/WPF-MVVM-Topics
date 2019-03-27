@@ -24,6 +24,7 @@
                 <ComboBoxItem>DepencyProperty</ComboBoxItem>
                 <ComboBoxItem>SimpleAttachedProperty</ComboBoxItem>
                 <ComboBoxItem>ComplexAttachedProperty</ComboBoxItem>
+                 <ComboBoxItem>Canvas</ComboBoxItem>
             </ComboBox>
               <Button Width="300" Height="50" Content="Open" Click="Button_Click"></Button>
         </StackPanel>

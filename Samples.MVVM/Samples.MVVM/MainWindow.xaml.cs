@@ -85,6 +85,10 @@ namespace Samples.MVVM
                     var complexAttachedProperty = new Scenarios.Medium.AttachedPropertyScenario();
                     complexAttachedProperty.ShowDialog();
                     break;
+                case "Canvas":
+                    var canvas = new Scenarios.Medium.CanvasScenario();
+                    canvas.ShowDialog();
+                    break;
 
             }
         }
