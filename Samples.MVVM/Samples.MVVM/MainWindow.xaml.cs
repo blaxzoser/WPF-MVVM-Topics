@@ -89,7 +89,15 @@ namespace Samples.MVVM
                     var canvas = new Scenarios.Medium.CanvasScenario();
                     canvas.ShowDialog();
                     break;
-
+                case "CommandsVsEventsScenario":
+                    var commandsVsEventsScenario = new Scenarios.Basic.CommandsVsEventsScenario();
+                    commandsVsEventsScenario.ShowDialog();
+                    break;
+                case "RelativeSourceScenario":
+                    var relativeSourceScenario = new Scenarios.Basic.RelativeSourceScenario();
+                    relativeSourceScenario.ShowDialog();
+                    break;
+                    
             }
         }
 
