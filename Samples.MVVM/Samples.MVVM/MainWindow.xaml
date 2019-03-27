@@ -11,8 +11,9 @@
         <StackPanel Margin="10">
               <ComboBox x:Name="cbOptions" Width="300" Height="50"   >
                   <ComboBoxItem>Controls</ComboBoxItem>
-                  <ComboBoxItem>Template</ComboBoxItem>
-                  <ComboBoxItem>Style</ComboBoxItem>
+                  <ComboBoxItem>DataTemplate</ComboBoxItem>
+                  <ComboBoxItem>ControlTemplate</ComboBoxItem>
+                   <ComboBoxItem>Style</ComboBoxItem>
                   <ComboBoxItem>Theming</ComboBoxItem>
                   <ComboBoxItem>Events</ComboBoxItem>
                   <ComboBoxItem>Binding</ComboBoxItem>

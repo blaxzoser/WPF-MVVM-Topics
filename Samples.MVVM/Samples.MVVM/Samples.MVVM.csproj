@@ -131,6 +131,9 @@
     <Compile Include="Scenarios\Basic\CommandsVsEventsScenario.xaml.cs">
       <DependentUpon>CommandsVsEventsScenario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\Basic\ControlTemplate.xaml.cs">
+      <DependentUpon>ControlTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Basic\ConvertsScenario.xaml.cs">
       <DependentUpon>ConvertsScenario.xaml</DependentUpon>
     </Compile>
@@ -313,6 +316,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\Basic\CommandsVsEventsScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Basic\ControlTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

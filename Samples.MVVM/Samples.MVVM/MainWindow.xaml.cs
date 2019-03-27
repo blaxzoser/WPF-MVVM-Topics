@@ -36,7 +36,7 @@ namespace Samples.MVVM
                     var newWindowsControl = new Scenarios.Basic.ConvertsScenario();
                     newWindowsControl.ShowDialog();
                     break;
-                case "Template":
+                case "DataTemplate":
                     var newWindowsTemplate = new Scenarios.Basic.DataTemplateScenario();
                     newWindowsTemplate.ShowDialog();
                     break;
@@ -97,7 +97,11 @@ namespace Samples.MVVM
                     var relativeSourceScenario = new Scenarios.Basic.RelativeSourceScenario();
                     relativeSourceScenario.ShowDialog();
                     break;
-                    
+                case "ControlTemplate":
+                    var ControlTemplate = new Scenarios.Basic.ControlTemplate();
+                    ControlTemplate.ShowDialog();
+                    break;
+
             }
         }
 

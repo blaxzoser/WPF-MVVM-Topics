@@ -24,9 +24,14 @@
         </DataTemplate>
     </UserControl.Resources>
     <Grid>
-        <ListBox  x:Name="listBoxCustomers"
+        <StackPanel>
+            <ListBox  x:Name="listBoxCustomers"
                  ItemTemplate="{StaticResource templateExplicit}" 
                  ItemsSource="{Binding Customers}"
                  />
+            <ComboBox  ItemsSource="{Binding Customers}" ItemTemplate="{StaticResource templateExplicit}">
+            </ComboBox>
+            <ListView ItemTemplate="{StaticResource templateExplicit}" ItemsSource="{Binding Customers}"></ListView>
+        </StackPanel>
     </Grid>
 </UserControl>
