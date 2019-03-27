@@ -9,7 +9,7 @@
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         x:Class="Samples.MVVM.Scenarios.Medium.BehaviorsScenarioView"
         mc:Ignorable="d"
-        Title="Behaviors Scenario" Height="450" Width="800">
+        Title="Behaviors Trigger Scenario" Height="450" Width="800">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <ei:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="LoadData"/>

@@ -41,14 +41,21 @@ namespace Samples.MVVM
                     newWindowsTemplate.ShowDialog();
                     break;
                 case "Style":
-                    var newWindowsStyle = new Scenarios.Medium.ResourcesScenario();
+                    var newWindowsStyle = new Scenarios.Basic.ValidationScenario();
                     newWindowsStyle.ShowDialog();
                     break;
-                case "Theming":
-                    var newWindowsTheming = new Scenarios.Basic.ValidationScenario();
+                case "AttachedBehaviour":
+                    var attachedBehaviour = new Scenarios.Basic.AttachedBehaviorScenario();
+                    attachedBehaviour.ShowDialog();
+                    break;
+                case "TriggersBehaviour":
+                    var newWindowsTheming = new Scenarios.Medium.BehaviorsScenarioView();
                     newWindowsTheming.ShowDialog();
                     break;
-
+                case "BlendBehaviour":
+                    var behaviourBlend = new Scenarios.Medium.Behaviour();
+                    behaviourBlend.ShowDialog();
+                    break;
                 case "Events":
                     var eventsScenario = new Scenarios.Basic.EventsScenario();
                     eventsScenario.ShowDialog();
@@ -60,6 +67,23 @@ namespace Samples.MVVM
                 case "BadScenario":
                     var badScenario = new Scenarios.Basic.GoodScenarioViewModel();
                     badScenario.ShowDialog();
+                    break;
+                case "Triggers":
+                    var triggersScenario = new Scenarios.Medium.TriggersScenario();
+                    triggersScenario.ShowDialog();
+                    break;
+
+                case "DepencyProperty":
+                    var depencyProperty = new Scenarios.Medium.DepencyPropertiesScenario();
+                    depencyProperty.ShowDialog();
+                    break;
+                case "SimpleAttachedProperty":
+                    var simpleAttachedProperty = new Scenarios.Basic.SimpleAttachScenario();
+                    simpleAttachedProperty.ShowDialog();
+                    break;
+                case "ComplexAttachedProperty":
+                    var complexAttachedProperty = new Scenarios.Medium.AttachedPropertyScenario();
+                    complexAttachedProperty.ShowDialog();
                     break;
 
             }

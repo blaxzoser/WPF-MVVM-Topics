@@ -35,11 +35,11 @@
                 </Trigger>
             </Style.Triggers>
             </Style>
-        <!--<ResourceDictionary>
+        <ResourceDictionary x:Key="MDictionary">
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Skin/TiempoColors.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Resources/Skin/TiempoDictionary.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>-->
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

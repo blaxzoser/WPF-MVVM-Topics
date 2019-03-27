@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Samples.MVVM.View"
              mc:Ignorable="d" 
              xmlns:Viewmodel="clr-namespace:Samples.MVVM.ViewModel"    
-             d:DataContext ="{d:DesignInstance {x:Type ViewModel:ProgressViewModel}, IsDesignTimeCreatable=True}">
+             d:DataContext ="{d:DesignInstance {x:Type Viewmodel:ProgressViewModel}, IsDesignTimeCreatable=True}">
     
     <DockPanel x:Name="root" Margin="4">
         <Button Content="Cancelar" Command="{Binding CancelCommand, Mode=OneWay}" Width="60" Margin="4,0,4,0" DockPanel.Dock="Right" VerticalAlignment="Center" />

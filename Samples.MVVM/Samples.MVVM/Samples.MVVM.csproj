@@ -84,8 +84,10 @@
     </ApplicationDefinition>
     <Compile Include="AttachedProperty\AttachedPropertiesBehavior.cs" />
     <Compile Include="AttachedProperty\AttachedPropertiesViewModel.cs" />
+    <Compile Include="AttachedProperty\GlobalAttachedProperty.cs" />
     <Compile Include="AttachedProperty\InsertCommandViewModel.cs" />
     <Compile Include="AttachedProperty\ViewModel.cs" />
+    <Compile Include="Behaviours\DigitsOnlyBehavior.cs" />
     <Compile Include="Command\AsyncCommand.cs" />
     <Compile Include="Command\AsyncCommandBase.cs" />
     <Compile Include="Command\CancelAsyncCommand.cs" />
@@ -120,6 +122,9 @@
     <Compile Include="Product\ProductListViewModel.cs" />
     <Compile Include="Product\ProductAddViewModel.cs" />
     <Compile Include="Progress\ProgressReport.cs" />
+    <Compile Include="Scenarios\Basic\AttachedBehaviorScenario.xaml.cs">
+      <DependentUpon>AttachedBehaviorScenario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenarios\Basic\BindingCoreScenario.xaml.cs">
       <DependentUpon>BindingCoreScenario.xaml</DependentUpon>
     </Compile>
@@ -143,6 +148,9 @@
     </Compile>
     <Compile Include="Scenarios\Basic\RelativeSourceScenario.xaml.cs">
       <DependentUpon>RelativeSourceScenario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Basic\SimpleAttachScenario.xaml.cs">
+      <DependentUpon>SimpleAttachScenario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Basic\ValidationScenario.xaml.cs">
       <DependentUpon>ValidationScenario.xaml</DependentUpon>
@@ -172,8 +180,11 @@
     <Compile Include="Scenarios\Medium\AttachedPropertyScenario.xaml.cs">
       <DependentUpon>AttachedPropertyScenario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenarios\Medium\BehaviorsScenarioView.xaml.cs">
-      <DependentUpon>BehaviorsScenarioView.xaml</DependentUpon>
+    <Compile Include="Scenarios\Medium\BehaviorsTriggersScenarioView.xaml.cs">
+      <DependentUpon>BehaviorsTriggersScenarioView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenarios\Medium\BehaviourBlendScenario.xaml.cs">
+      <DependentUpon>BehaviourBlendScenario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Medium\CanvasScenario.xaml.cs">
       <DependentUpon>CanvasScenario.xaml</DependentUpon>
@@ -254,6 +265,9 @@
     <Compile Include="View\DesignTimeView.xaml.cs">
       <DependentUpon>DesignTimeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SimpleAttachedProperty.xaml.cs">
+      <DependentUpon>SimpleAttachedProperty.xaml</DependentUpon>
+    </Compile>
     <Page Include="CompanyPage\CompanyListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -290,6 +304,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Scenarios\Basic\AttachedBehaviorScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenarios\Basic\BindingCoreScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -319,6 +337,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenarios\Basic\RelativeSourceScenario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Basic\SimpleAttachScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -358,7 +380,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Scenarios\Medium\BehaviorsScenarioView.xaml">
+    <Page Include="Scenarios\Medium\BehaviorsTriggersScenarioView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenarios\Medium\BehaviourBlendScenario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -443,6 +469,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DesignTimeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SimpleAttachedProperty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

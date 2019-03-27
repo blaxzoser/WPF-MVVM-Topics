@@ -1,0 +1,17 @@
+﻿<Window x:Class="Samples.MVVM.Scenarios.Basic.AttachedBehaviorScenario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Samples.MVVM.Scenarios.Basic"
+        xmlns:behaviours="clr-namespace:Samples.MVVM.Behaviours"
+        mc:Ignorable="d"
+        Title="AttachedBehaviorScenario" Height="450" Width="800">
+    <Grid>
+         <StackPanel>
+            <CheckBox x:Name="CheckBox">IsDigitOnly</CheckBox>
+            <TextBox Grid.Row="0" behaviours:DigitsOnlyBehavior.IsDigitOnly="{Binding ElementName=CheckBox,Path=IsChecked}" Margin="6"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

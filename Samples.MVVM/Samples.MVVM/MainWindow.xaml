@@ -17,6 +17,13 @@
                   <ComboBoxItem>Events</ComboBoxItem>
                   <ComboBoxItem>Binding</ComboBoxItem>
                 <ComboBoxItem>BadScenario</ComboBoxItem>
+                <ComboBoxItem>Triggers</ComboBoxItem>
+                <ComboBoxItem>AttachedBehaviour</ComboBoxItem>
+                <ComboBoxItem>TriggersBehaviour</ComboBoxItem>
+                <ComboBoxItem>BlendBehaviour</ComboBoxItem>
+                <ComboBoxItem>DepencyProperty</ComboBoxItem>
+                <ComboBoxItem>SimpleAttachedProperty</ComboBoxItem>
+                <ComboBoxItem>ComplexAttachedProperty</ComboBoxItem>
             </ComboBox>
               <Button Width="300" Height="50" Content="Open" Click="Button_Click"></Button>
         </StackPanel>
