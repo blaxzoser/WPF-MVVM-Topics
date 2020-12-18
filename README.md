@@ -1,6 +1,6 @@
-# NewM_training
+# Traning WPF 
 
-New Millenium Training project
+We have differents scenarios and basic samples!
 
 Clone and download the project
 
