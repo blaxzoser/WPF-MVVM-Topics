@@ -65,8 +65,12 @@ namespace Samples.MVVM
                     bindinBindingCoreScenario.ShowDialog();
                     break;
                 case "BadScenario":
-                    var badScenario = new Scenarios.Basic.GoodScenarioViewModel();
+                    var badScenario = new Scenarios.Basic.BadScenarioViewModel();
                     badScenario.ShowDialog();
+                    break;
+                case "GoodScenario":
+                    var goodScenario = new Scenarios.Basic.GoodScenarioViewModel();
+                    goodScenario.ShowDialog();
                     break;
                 case "Triggers":
                     var triggersScenario = new Scenarios.Medium.TriggersScenario();

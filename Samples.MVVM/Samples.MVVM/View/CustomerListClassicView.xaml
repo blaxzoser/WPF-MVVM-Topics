@@ -25,10 +25,14 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Name}" />
+                            <TextBlock Text="{Binding  Phone}"></TextBlock>
+                            <TextBlock Text="{Binding  LastName}"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+            <DataGrid x:Name="dgSimple"  Width="500" Height="100" ItemsSource="{Binding CustomersNotUdpateUI}">
+            </DataGrid>
             <Button Content="Added new Customer" Width="200" Click="AddNotDoThat_Click"></Button>
             <Button Content="Update Names and Title" Width="200" Click="NotDoThat_Click"></Button>
         </StackPanel>

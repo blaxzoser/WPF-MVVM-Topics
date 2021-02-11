@@ -15,6 +15,7 @@
     <UserControl.Resources>
         <DataTemplate x:Key="templateExplicit"  >
             <StackPanel>
+                <Button  Width="100" Height="50" Content="sample" ></Button>
                 <TextBlock Text="{Binding Name}"></TextBlock>
                 <TextBlock Text="{Binding LastName}"></TextBlock>
                 <TextBlock Text="{Binding Phone}"></TextBlock>

@@ -31,9 +31,11 @@ namespace Samples.MVVM.ViewModel
         {
             _customerRepository = new CustomerRepository();
             var listCustomers = _customerRepository.Get();
+
             Customers = new ObservableCollection<Customer>(listCustomers);
             CustomersNotUdpateUI = listCustomers;
-            TitlePage = "Componen List of Customers";
+
+            TitlePage = "Component List of Customers";
         }
         #endregion
 
@@ -41,19 +43,27 @@ namespace Samples.MVVM.ViewModel
         public void UpdateNameCustomers()
         {
             //It's not working well
-            foreach (var customer in Customers)
+            foreach (var customer in CustomersNotUdpateUI)
             {
-                customer.Name = "fake";
+                customer.Name = "Update Name List";
             }
 
             //It's not working well
-            TitlePage = "ChangeCustomer";
+            foreach (var customer in Customers)
+            {
+                customer.Name = "Update Name Observable";
+            }
+
+            CustomersNotUdpateUI.RemoveAt(1);
+
+            //It's not working well
+            TitlePage = "Nooooooooooooooooooooooooot";
         }
 
         public void AddCustomer()
         {
-            Customers.Add(new Customer() { Name = "Fake", LastName = "Fake", Phone = 1212 });
-            CustomersNotUdpateUI.Add(new Customer() { Name = "Fake", LastName = "Fake", Phone = 1212 });
+            Customers.Add(new Customer() { Name = "New Observable", LastName = "Fake 1", Phone = 33 });
+            CustomersNotUdpateUI.Add(new Customer() { Name = "New List", LastName = "Fake 2", Phone = 444 });
         }
         #endregion
     }

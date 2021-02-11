@@ -17,8 +17,9 @@
                   <ComboBoxItem>Theming</ComboBoxItem>
                   <ComboBoxItem>Events</ComboBoxItem>
                   <ComboBoxItem>Binding</ComboBoxItem>
-                <ComboBoxItem>BadScenario</ComboBoxItem>
-                <ComboBoxItem>Triggers</ComboBoxItem>
+                  <ComboBoxItem>BadScenario</ComboBoxItem>
+                  <ComboBoxItem>GoodScenario</ComboBoxItem>
+                  <ComboBoxItem>Triggers</ComboBoxItem>
                 <ComboBoxItem>AttachedBehaviour</ComboBoxItem>
                 <ComboBoxItem>TriggersBehaviour</ComboBoxItem>
                 <ComboBoxItem>BlendBehaviour</ComboBoxItem>
