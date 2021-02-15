@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Samples.MVVM.Scenarios.Medium;
 
 namespace Samples.MVVM
 {
@@ -105,6 +106,37 @@ namespace Samples.MVVM
                     var ControlTemplate = new Scenarios.Basic.ControlTemplate();
                     ControlTemplate.ShowDialog();
                     break;
+                case "ConvertsScenario":
+                    var convertsScenario = new Scenarios.Basic.ConvertsScenario();
+                    convertsScenario.ShowDialog();
+                    break;
+                case "ValidationScenario":
+                    var validationScenario = new Scenarios.Basic.ValidationScenario();
+                    validationScenario.ShowDialog();
+                    break;
+                case "ResourcesScenario":
+                    var resourcesScenario = new Scenarios.Medium.ResourcesScenario();
+                    resourcesScenario.ShowDialog();
+                    break;
+                case "PanelScenario":
+                    var panelScenario = new Scenarios.Medium.PanelScenario();
+                    panelScenario.ShowDialog();
+                    break;
+                case "GridLayoutScenario":
+                    var gridLayoutScenario = new Scenarios.Medium.GridLayoutScenario();
+                    gridLayoutScenario.ShowDialog();
+                    break;
+                case "ScrollViewerScenario":
+                    var scrollViewerScenario = new Scenarios.Medium.ScrollViewerScenario();
+                    scrollViewerScenario.ShowDialog();
+                    break;
+                case "ViewBoxScenario":
+                    var viewBoxScenario = new Scenarios.Medium.ViewBoxScenario();
+                    viewBoxScenario.ShowDialog();
+                    break;
+
+
+
 
             }
         }

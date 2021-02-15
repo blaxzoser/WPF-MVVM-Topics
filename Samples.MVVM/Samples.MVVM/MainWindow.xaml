@@ -29,7 +29,14 @@
                  <ComboBoxItem>Canvas</ComboBoxItem>
                 <ComboBoxItem>CommandsVsEventsScenario</ComboBoxItem>
                 <ComboBoxItem>RelativeSourceScenario</ComboBoxItem>
-            </ComboBox>
+                <ComboBoxItem>ConvertsScenario</ComboBoxItem>
+                  <ComboBoxItem>ValidationScenario</ComboBoxItem>
+                <ComboBoxItem>ResourcesScenario</ComboBoxItem>
+                <ComboBoxItem>PanelScenario</ComboBoxItem>
+                <ComboBoxItem>GridLayoutScenario</ComboBoxItem>
+                <ComboBoxItem>ScrollViewerScenario</ComboBoxItem>
+                <ComboBoxItem>ViewBoxScenario</ComboBoxItem>
+              </ComboBox>
               <Button Width="300" Height="50" Content="Open" Click="Button_Click"></Button>
         </StackPanel>
     </Grid>

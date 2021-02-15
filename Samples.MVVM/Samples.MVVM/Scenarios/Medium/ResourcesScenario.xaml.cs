@@ -63,7 +63,9 @@ namespace Samples.MVVM.Scenarios.Medium
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Resources["tiempoColorBrush"] = new SolidColorBrush(Colors.Pink);
+            //this.Resources["localColorBrush"] = new SolidColorBrush(Colors.Pink);
+            lblStaticResource.Background = new SolidColorBrush(Colors.Pink);
+            var localColorBrush = new SolidColorBrush(Colors.Pink);
         }
 
 

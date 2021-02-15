@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Samples.MVVM.Scenarios.Medium"
         mc:Ignorable="d"
         Title="Panel Scenario" Height="450" Width="800">
-    <StackPanel>
+    <!--<StackPanel>
         <Button Content="Sample" 
                 Height="45"
                 Width="90"
@@ -22,33 +22,34 @@
                 Height="90">
         </Button>
         <Button Content="Sample"></Button>
-    </StackPanel>
+    </StackPanel>-->
     <!--<WrapPanel Width="500" ItemWidth="200" >
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
-        <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
+    <Button Content="Sample"></Button>
     </WrapPanel>-->
-    <!--<DockPanel LastChildFill="True">
+    
+    <DockPanel LastChildFill="True">
         <Button Content="Top" DockPanel.Dock="Top"></Button>
         <Button Content="Left" DockPanel.Dock="Left"></Button>
         <Button Content="Right" DockPanel.Dock="Right"></Button>
         <Button Content="Button" DockPanel.Dock="Bottom"></Button>
         <Button Content="Fill"></Button>
-    </DockPanel>-->
+    </DockPanel>
 </Window>
